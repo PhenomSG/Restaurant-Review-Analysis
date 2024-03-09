@@ -1,0 +1,4 @@
+# python - code
+# spaCy,Gensim,NLTK - nlp
+# scikit learn - ML
+# Tensorflow, Pytorch, Hugging Face - DL
