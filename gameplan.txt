@@ -1,0 +1,15 @@
+# Scope
+
+
+# to do
+1. Install Transformers
+2. see how it works learn about it
+3. scrape reviews
+-> eay ones- amazon.us, yelp
+-> tricky - amazon india
+-> nooice - twitter
+-> bad - instagram
+-> take a look - new sites
+
+
+
