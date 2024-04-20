@@ -1,0 +1,18 @@
+To see CUDA VERSION -->>
+
+1. Using NVIDIA System Management Interface (nvidia-smi):
+
+Open a terminal or command prompt and run the following command:
+
+nvidia-smi
+
+This command will display information about your NVIDIA GPU, including the CUDA version installed.
+
+2. Using Python and PyTorch:
+
+You can also check the CUDA version using Python and PyTorch:
+
+import torch
+print(torch.version.cuda)
+
+This will print the CUDA version that PyTorch is currently using.
