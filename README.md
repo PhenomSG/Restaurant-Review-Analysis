@@ -1,10 +1,10 @@
-![Main Image](reviews.jpeg)
 # Sentiment Analysis with BERT Neural Network
 
 ## Overview
 
 This project utilizes the power of BERT (Bidirectional Encoder Representations from Transformers) for sentiment analysis. BERT is a state-of-the-art natural language processing model that excels in understanding context and nuances in text. The sentiment analysis task involves predicting the sentiment (positive, negative, or neutral) of a given piece of text.
 
+![Main Image](reviews.jpeg)
 ## Requirements
 
 Make sure you have the following prerequisites installed before running the code:
