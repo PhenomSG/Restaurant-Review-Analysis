@@ -1,3 +1,4 @@
+![Main Image](reviews.jpeg)
 # Sentiment Analysis with BERT Neural Network
 
 ## Overview
