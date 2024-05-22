@@ -125,12 +125,3 @@ We welcome contributions! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- Special thanks to the developers of the Gemini Pro API for providing a robust platform for NLP and image analysis.
-<<<<<<< HEAD
-- Thanks to the contributors of the various Python libraries used in this project.
-=======
-- Thanks to the contributors of the various Python libraries used in this project.
->>>>>>> 890f6d0898753cc4886d6eb8bda5ac20b9cd1ffb
