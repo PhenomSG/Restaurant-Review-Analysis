@@ -36,7 +36,7 @@ This project aims to build a comprehensive system for collecting and analyzing r
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/restaurant-review-analysis.git
+    git clone https://github.com/SahajG009/Sentiment_Analysis_Using_NLP.git
     cd restaurant-review-analysis
     ```
 
@@ -129,4 +129,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgements
 
 - Special thanks to the developers of the Gemini Pro API for providing a robust platform for NLP and image analysis.
+<<<<<<< HEAD
 - Thanks to the contributors of the various Python libraries used in this project.
+=======
+- Thanks to the contributors of the various Python libraries used in this project.
+>>>>>>> 890f6d0898753cc4886d6eb8bda5ac20b9cd1ffb
