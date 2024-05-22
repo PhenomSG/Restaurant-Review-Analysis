@@ -48,7 +48,7 @@ We welcome suggestions for new features and improvements! Please submit your ide
 
 ### Code of Conduct
 
-Please adhere to our [Code of Conduct](CODE_OF_CONDUCT.md) in all interactions with the project and its community.
+Please adhere to a moral Code of Conduct in all interactions with the project and its community.
 
 ## Getting Started
 
