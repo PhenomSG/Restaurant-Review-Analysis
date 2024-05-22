@@ -1,7 +1,3 @@
-Certainly! Here is a detailed README file for your project:
-
----
-
 # Restaurant Review Analysis System
 
 ## Project Overview
@@ -134,7 +130,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - Special thanks to the developers of the Gemini Pro API for providing a robust platform for NLP and image analysis.
 - Thanks to the contributors of the various Python libraries used in this project.
-
----
-
-Feel free to customize and expand this README file as needed.
