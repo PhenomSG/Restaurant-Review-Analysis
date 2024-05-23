@@ -22,4 +22,15 @@ then save it after that i can read data from the file and then classify diff res
 
 --- reviving it
 
+-- gemini api fully done
+
+-- now working ones
+----making parts working
+----merging together parts
+----addressing the control flow
+----flow division
+----data creation/check
+----webapp idk
+----mobile app idk
+----try not to burn out
 
