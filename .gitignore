@@ -3,3 +3,4 @@ std.txt
 .env
 .ipynb_checkpoints/
 */.ipynb_checkpoints/
+test.py
