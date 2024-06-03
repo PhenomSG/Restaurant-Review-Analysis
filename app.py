@@ -121,11 +121,11 @@ elif choice == "Contact Us":
         """
         ## Contact Us
 
-        **Address:** 123 Main Street, Cityville
+        **Address:** Dayananda Sagar College of Engineering
 
-        **Phone:** 555-555-5555
+        **Phone:** 6969-6969-6969
 
-        **Email:** info@yummydelights.com
+        **Email:** chutiye@rranalysis.com
         """
     )
 
