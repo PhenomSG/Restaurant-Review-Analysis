@@ -57,7 +57,7 @@ elif choice == "Reviews":
 
     def generate_restaurant_data(num_restaurants):
         data = {
-            "Restaurant Name": [f"Restaurant {i+1}" for i in range(num_restaurants)],
+            "Restaurant Name": [f"Udupi {i+1}" for i in range(num_restaurants)],
             "Location": ["Bangalore" for _ in range(num_restaurants)],
             "Rating": np.random.randint(1, 6, size=num_restaurants),
             "Reviews": np.random.randint(50, 1000, size=num_restaurants)
