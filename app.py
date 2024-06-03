@@ -1,4 +1,3 @@
-# hume aapki zarurat hai
 # importing dependencies
 import streamlit as st
 import time
@@ -6,11 +5,39 @@ import numpy as np
 import pandas as pd
 import PIL as img
 import requests
-from io import BytesIO      # for images
+from io import BytesIO 
+import base64
 
+# Set page configuration
+st.set_page_config(
+    page_title="Sahaj",
+    page_icon="🍔",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 
-# Title
-st.title("Restaurant Analysis System")
+def get_base64(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+def set_background(png_file):
+    bin_str = get_base64(png_file)
+    page_bg_img = '''
+    <style>
+    .stApp {
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
+    }
+    </style>
+    ''' % bin_str
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+
+set_background("E:/Sentiment_Analysis_Using_NLP/foodie.jpg")
+
+# Your Streamlit app content goes here
+st.title("Welcome to Restaurant Review Analysis System!")
+
 
 # Menu
 menu_options = ["Home", "Reviews", "About Us", "Contact Us"]
@@ -26,22 +53,3 @@ map_data = pd.DataFrame(
 
 st.map(map_data)
 
-''''Starting a long computation...'
-
-# Add a placeholder
-latest_iteration = st.empty()
-bar = st.progress(0)
-
-for i in range(100):
-  # Update the progress bar with each iteration.
-  latest_iteration.text(f'Iteration {i+1}')
-  bar.progress(i + 1)
-  time.sleep(0.1)
-
-'...and now we\'re done!'
-# Add a selectbox to the sidebar:
-add_selectbox = st.sidebar.selectbox(
-    'How would you like to be contacted?',
-    ('Email', 'Home phone', 'Mobile phone')
-)
-'''
