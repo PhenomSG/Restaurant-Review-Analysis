@@ -6,11 +6,15 @@ import numpy as np
 import pandas as pd
 import PIL as img
 import requests
-from io import BytesIO      # ye kya hai bc
+from io import BytesIO      # for images
 
 
 # Title
 st.title("Restaurant Analysis System")
+
+# Menu
+menu_options = ["Home", "Reviews", "About Us", "Contact Us"]
+choice = st.sidebar.selectbox("Menu", menu_options)
 
 # Section 1: Review Collection
 st.header("Review Collection")
@@ -22,7 +26,7 @@ map_data = pd.DataFrame(
 
 st.map(map_data)
 
-'Starting a long computation...'
+''''Starting a long computation...'
 
 # Add a placeholder
 latest_iteration = st.empty()
@@ -40,3 +44,4 @@ add_selectbox = st.sidebar.selectbox(
     'How would you like to be contacted?',
     ('Email', 'Home phone', 'Mobile phone')
 )
+'''
