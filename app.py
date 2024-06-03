@@ -35,6 +35,9 @@ def set_background(png_file):
 
 set_background("E:/Sentiment_Analysis_Using_NLP/foodie.jpg")
 
+
+st.title("Welcome to Restaurant Review Analysis System!")
+
 sidebar_options = ["Home", "Reviews", "About Us", "Contact Us"]
 
 choice = st.sidebar.selectbox("Menu", sidebar_options)
@@ -62,8 +65,6 @@ elif choice == "Reviews":
         return pd.DataFrame(data)
 
     bangalore_restaurants = generate_restaurant_data(10)
-
-    st.title("Restaurant Reviews Analysis System")
     
     # recent reviews
     st.header("Recent Reviews")
