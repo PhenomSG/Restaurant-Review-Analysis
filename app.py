@@ -11,7 +11,7 @@ import base64
 # Set page configuration
 st.set_page_config(
     page_title="Sahaj",
-    page_icon="🍔",
+    page_icon="🥘",     # rasode mein kaun tha
     layout="wide",
     initial_sidebar_state="expanded",
 )
