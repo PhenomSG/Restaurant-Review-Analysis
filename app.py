@@ -35,9 +35,6 @@ def set_background(png_file):
 
 set_background("E:/Sentiment_Analysis_Using_NLP/foodie.jpg")
 
-
-st.title("Welcome to Restaurant Review Analysis System!")
-
 sidebar_options = ["Home", "Reviews", "About Us", "Contact Us"]
 
 choice = st.sidebar.selectbox("Menu", sidebar_options)
