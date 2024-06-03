@@ -73,9 +73,9 @@ elif choice == "Reviews":
     st.write("""
         Here are some of the most recent reviews from our users:
 
-        - **Restaurant 1**: "Excellent food and service!"
-        - **Restaurant 2**: "Average experience, could be better."
-        - **Restaurant 3**: "Delicious food, but service was slow."
+        - **Udupi 1**: "Excellent food and service!"
+        - **Udupi 2**: "Average experience, could be better."
+        - **Udupi 3**: "Delicious food, but service was slow."
     """)
 
     # Reviews stats section
