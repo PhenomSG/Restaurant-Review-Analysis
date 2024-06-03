@@ -55,7 +55,6 @@ if choice == "Home":
 # SidePage
 elif choice == "Reviews":
 
-    # Function to generate fake restaurant data
     def generate_restaurant_data(num_restaurants):
         data = {
             "Restaurant Name": [f"Restaurant {i+1}" for i in range(num_restaurants)],
@@ -65,13 +64,11 @@ elif choice == "Reviews":
         }
         return pd.DataFrame(data)
 
-    # Generate sample restaurant data for Bangalore
     bangalore_restaurants = generate_restaurant_data(10)
 
-    # Page Title
     st.title("Restaurant Reviews Analysis System")
-
-    # Recent Reviews Section
+    
+    # recent reviews
     st.header("Recent Reviews")
     st.write("""
         Here are some of the most recent reviews from our users:
@@ -81,14 +78,14 @@ elif choice == "Reviews":
         - **Restaurant 3**: "Delicious food, but service was slow."
     """)
 
-    # Reviews Statistics Section
+    # Reviews stats section
     st.header("Reviews Statistics")
     st.write(f"""
         ### Average Rating: {bangalore_restaurants['Rating'].mean():.2f}
         ### Total Reviews: {bangalore_restaurants['Reviews'].sum()}
     """)
 
-    # Display DataFrame of Restaurants in Bangalore
+    # dataframe of restrau
     st.header("Restaurants in Bangalore")
     st.dataframe(bangalore_restaurants)
 
