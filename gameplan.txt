@@ -34,7 +34,7 @@ then save it after that i can read data from the file and then classify diff res
 ----mobile app idk
 ----try not to burn out
 
-***** app pe kaam *****
+***** app pe kaam ***** 
 -- wtf is steamlit
 -- jaankari
 -- title
@@ -43,3 +43,6 @@ then save it after that i can read data from the file and then classify diff res
 -- image ka jugaad
 -- aur jo man mein aaye
 
+** 14-07-24 **
+-- make dataset 
+    -- restaurants in bangalore - 50 ok
