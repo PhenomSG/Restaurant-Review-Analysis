@@ -22,7 +22,6 @@ CREATE TABLE ContactInformation (
     FOREIGN KEY (restaurant_id) REFERENCES Restaurants(restaurant_id)
 );
 
--- Create the Ratings / Reviews table
 -- Create the Ratings / Reviews table with Image Path
 CREATE TABLE RatingsReviews (
     review_id INT NOT NULL AUTO_INCREMENT,
