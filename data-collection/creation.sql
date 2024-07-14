@@ -23,17 +23,19 @@ CREATE TABLE ContactInformation (
 );
 
 -- Create the Ratings / Reviews table
+-- Create the Ratings / Reviews table with Image Path
 CREATE TABLE RatingsReviews (
     review_id INT NOT NULL AUTO_INCREMENT,
     customer_id INT NOT NULL,
     restaurant_id INT NOT NULL,
     review_text TEXT,
     rating FLOAT,
-    image_url VARCHAR(255),
+    image_path VARCHAR(255),
     PRIMARY KEY (review_id),
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
     FOREIGN KEY (restaurant_id) REFERENCES Restaurants(restaurant_id)
 );
+
 
 -- Create the Customers table
 CREATE TABLE Customers (
