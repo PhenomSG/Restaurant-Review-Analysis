@@ -1,5 +1,5 @@
 INSERT INTO RatingsReviews (customer_id, restaurant_id, review_text, rating, image_path) VALUES
-('CUST0001', 1, 'The food was good, but the ambiance felt lacking. While the dishes were well-prepared, the restaurant could benefit from updating its decor and lighting to create a more inviting atmosphere.', 4.5, 'images/review1.jpg'),
+('CUST0001', 1, 'The food was good, but the ambiance felt lacking. While the dishes were well-prepared, the restaurant could benefit from updating its decor and lighting to create a more inviting atmosphere.', 4.5, 'E:\\Sentiment_Analysis_Using_NLP\\restaurant_images\\review1.jpg'),
 ('CUST0002', 1, 'Service was friendly, but the menu lacked variety and innovation. Although the staff was attentive, the limited menu options left me wanting more exciting choices.', 4.0, 'images/review2.jpg'),
 ('CUST0003', 1, 'Overall, the experience was pleasant, but there were some inconsistencies in food quality. Some dishes were excellent, while others fell short of expectations. More consistency would greatly enhance the dining experience.', 4.7, 'images/review3.jpg'),
 ('CUST0004', 1, 'The food was delicious, but the prices were quite high for the portion sizes offered. While the quality justified the cost to some extent, a more balanced pricing strategy would make dining here more accessible.', 4.3, 'images/review4.jpg'),
