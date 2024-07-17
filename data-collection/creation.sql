@@ -13,13 +13,6 @@ CREATE TABLE Restaurants (
     PRIMARY KEY (restaurant_id)
 );
 
--- Create the Customers table
-CREATE TABLE Customers (
-    customer_id CHAR(8) NOT NULL,
-    customer_email VARCHAR(255) UNIQUE,
-    PRIMARY KEY (customer_id)
-);
-
 -- Create the Contact Information table
 CREATE TABLE RestrauContactInfo (
     restaurant_id INT NOT NULL,
@@ -32,7 +25,7 @@ CREATE TABLE RestrauContactInfo (
 -- Create the Ratings / Reviews table with Image Path
 CREATE TABLE RatingsReviews (
     review_id INT NOT NULL AUTO_INCREMENT,
-    customer_id CHAR(8) NOT NULL,
+    customer_id INT NOT NULL,
     restaurant_id INT NOT NULL,
     review_text TEXT,
     rating FLOAT,
@@ -41,3 +34,11 @@ CREATE TABLE RatingsReviews (
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
     FOREIGN KEY (restaurant_id) REFERENCES Restaurants(restaurant_id)
 );
+
+-- Create the Customers table
+CREATE TABLE Customers (
+    customer_id CHAR(8) NOT NULL,
+    customer_email VARCHAR(255) UNIQUE,
+    PRIMARY KEY (customer_id)
+);
+
