@@ -249,3 +249,13 @@ INSERT INTO Customers (customer_id, customer_email) VALUES
 ('CUST0248', 'rakesh.kumar248@gmail.com'),
 ('CUST0249', 'prashant.verma249@gmail.com'),
 ('CUST0250', 'nisha.singh250@gmail.com');
+('CUST0251', 'john.doe251@yahoo.com'),
+('CUST0252', 'emma.smith252@yahoo.com'),
+('CUST0253', 'michael.jones253@yahoo.com'),
+('CUST0254', 'sarah.wilson254@yahoo.com'),
+('CUST0255', 'chris.brown255@yahoo.com'),
+('CUST0256', 'lisa.davis256@yahoo.com'),
+('CUST0257', 'kevin.white257@yahoo.com'),
+('CUST0258', 'amanda.moore258@yahoo.com'),
+('CUST0259', 'peter.anderson259@yahoo.com'),
+('CUST0260', 'jessica.thomas260@yahoo.com');
