@@ -1,73 +1,73 @@
 INSERT INTO RatingsReviews (customer_id, restaurant_id, review_text, rating, image_path) VALUES
 -- Reviews for Restaurant 1
-('CUST0001', 1, 'Great food and ambiance!', 4.5, 'images/review1.jpg'),
-('CUST0002', 1, 'Loved the service and the menu.', 4.0, 'images/review2.jpg'),
-('CUST0003', 1, 'A wonderful experience overall.', 4.7, 'images/review3.jpg'),
-('CUST0004', 1, 'Delicious food but a bit pricey.', 4.3, 'images/review4.jpg'),
-('CUST0005', 1, 'Would definitely visit again!', 4.8, 'images/review5.jpg'),
+('CUST0001', 1, 'The food was good, but the ambiance felt lacking. While the dishes were well-prepared, the restaurant could benefit from updating its decor and lighting to create a more inviting atmosphere.', 4.5, 'images/review1.jpg'),
+('CUST0002', 1, 'Service was friendly, but the menu lacked variety and innovation. Although the staff was attentive, the limited menu options left me wanting more exciting choices.', 4.0, 'images/review2.jpg'),
+('CUST0003', 1, 'Overall, the experience was pleasant, but there were some inconsistencies in food quality. Some dishes were excellent, while others fell short of expectations. More consistency would greatly enhance the dining experience.', 4.7, 'images/review3.jpg'),
+('CUST0004', 1, 'The food was delicious, but the prices were quite high for the portion sizes offered. While the quality justified the cost to some extent, a more balanced pricing strategy would make dining here more accessible.', 4.3, 'images/review4.jpg'),
+('CUST0005', 1, 'I enjoyed my visit and would consider returning, but the service could be more prompt and attentive. Despite this, the overall experience was positive, and I appreciated the efforts of the kitchen staff.', 4.8, 'images/review5.jpg');
 
 -- Reviews for Restaurant 2
-('CUST0006', 2, 'The food was just okay.', 3.5, 'images/review6.jpg'),
-('CUST0007', 2, 'Nice place to hang out with friends.', 4.2, 'images/review7.jpg'),
-('CUST0008', 2, 'Service could be better.', 3.8, 'images/review8.jpg'),
-('CUST0009', 2, 'Good variety of dishes.', 4.0, 'images/review9.jpg'),
-('CUST0010', 2, 'Loved the desserts.', 4.5, 'images/review10.jpg'),
+('CUST0006', 2, 'The food was mediocre and lacked flavor. While it wasn't bad, it also didn't leave a lasting impression. The restaurant could benefit from more robust seasoning and fresher ingredients.', 3.5, 'images/review6.jpg'),
+('CUST0007', 2, 'The atmosphere is inviting for social gatherings, but the noise level can be distracting. Itis a great place to meet friends, but quieter spaces or better acoustics would improve the overall experience.', 4.2, 'images/review7.jpg'),
+('CUST0008', 2, 'Service was adequate but could have been more attentive. There were delays in orders and it took a while to get the attention of the staff. Improved training and staffing levels could enhance service quality.', 3.8, 'images/review8.jpg'),
+('CUST0009', 2, 'While there is a good variety of dishes on the menu, some lacked depth in flavor and creativity. More innovative options or seasonal specials would add excitement to the dining choices.', 4.0, 'images/review9.jpg'),
+('CUST0010', 2, 'Desserts were the highlight of the meal. They were beautifully presented and tasted divine. However, the main courses did not match the same level of excellence and could be improved.', 4.5, 'images/review10.jpg');
 
 -- Reviews for Restaurant 3
-('CUST0011', 3, 'A wonderful dining experience.', 4.6, 'images/review11.jpg'),
-('CUST0012', 3, 'The food was excellent!', 4.3, 'images/review12.jpg'),
-('CUST0013', 3, 'Highly recommend this place.', 4.9, 'images/review13.jpg'),
-('CUST0014', 3, 'Service was top-notch.', 4.7, 'images/review14.jpg'),
-('CUST0015', 3, 'Great ambiance.', 4.4, 'images/review15.jpg'),
+('CUST0011', 3, 'While the dining experience was pleasant, the menu lacked variety and originality. More innovative dishes would enhance the overall appeal of the restaurant.', 4.6, 'images/review11.jpg'),
+('CUST0012', 3, 'The food quality was good overall, but some dishes were inconsistent in taste and presentation. More attention to detail would elevate the dining experience.', 4.3, 'images/review12.jpg'),
+('CUST0013', 3, 'Although this place comes highly recommended, I found the prices to be on the higher side for what was offered. A better value proposition would make it more accessible to a wider audience.', 4.9, 'images/review13.jpg'),
+('CUST0014', 3, 'Service was generally attentive, but there were moments of delay in attending to our needs. Consistent service standards throughout the visit would improve customer satisfaction.', 4.7, 'images/review14.jpg'),
+('CUST0015', 3, 'The ambiance was nice, but the noise level made it difficult to have a conversation comfortably. Better acoustics or seating arrangements could enhance the dining environment.', 4.4, 'images/review15.jpg');
 
 -- Reviews for Restaurant 4
-('CUST0016', 4, 'Good food and service.', 4.0, 'images/review16.jpg'),
-('CUST0017', 4, 'Enjoyed the meal.', 4.2, 'images/review17.jpg'),
-('CUST0018', 4, 'Nice place, will come again.', 4.1, 'images/review18.jpg'),
-('CUST0019', 4, 'Food was tasty.', 4.3, 'images/review19.jpg'),
-('CUST0020', 4, 'Service was a bit slow.', 3.9, 'images/review20.jpg'),
+('CUST0016', 4, 'The food was decent, but the service lacked attentiveness. We had to wait longer than expected for our orders, which affected our overall dining experience.', 4.0, 'images/review16.jpg'),
+('CUST0017', 4, 'While the meal was enjoyable, some dishes were underseasoned and lacked flavor depth. More attention to seasoning would enhance the taste.', 4.2, 'images/review17.jpg'),
+('CUST0018', 4, 'The restaurant has a pleasant ambiance, but the seating arrangements were cramped and uncomfortable. Better spacing between tables would improve comfort levels.', 4.1, 'images/review18.jpg'),
+('CUST0019', 4, 'Although the food was tasty, the menu options were limited, especially for vegetarian choices. Adding more diverse options would cater to a wider audience.', 4.3, 'images/review19.jpg'),
+('CUST0020', 4, 'Service was courteous but slow. There were delays in getting our orders taken and receiving the bill, which affected the overall dining pace.', 3.9, 'images/review20.jpg');
 
 -- Reviews for Restaurant 5
-('CUST0021', 5, 'Had a great time.', 4.6, 'images/review21.jpg'),
-('CUST0022', 5, 'Food was delicious.', 4.5, 'images/review22.jpg'),
-('CUST0023', 5, 'Good service and food.', 4.7, 'images/review23.jpg'),
-('CUST0024', 5, 'Loved the ambiance.', 4.8, 'images/review24.jpg'),
-('CUST0025', 5, 'Would recommend.', 4.4, 'images/review25.jpg'),
+('CUST0021', 5, 'The experience was enjoyable, but the restaurant could benefit from more unique offerings on the menu. While the food was good, more creativity in the dishes would make the dining experience more memorable.', 4.6, 'images/review21.jpg'),
+('CUST0022', 5, 'The food was tasty overall, but some dishes lacked consistency in flavor and presentation. Ensuring consistency across all dishes would enhance the dining experience.', 4.5, 'images/review22.jpg'),
+('CUST0023', 5, 'Service and food quality were good, but there were instances where the service felt rushed. Balancing attentiveness with pacing would improve the overall dining service.', 4.7, 'images/review23.jpg'),
+('CUST0024', 5, 'While the ambiance was pleasant, the lighting was a bit dim, affecting the overall atmosphere. Brighter lighting or adjustable lighting options would improve the dining ambiance.', 4.8, 'images/review24.jpg'),
+('CUST0025', 5, 'I enjoyed my visit and would recommend it, but the noise level was high, making it difficult to have conversations comfortably. Better noise management would enhance the dining experience.', 4.4, 'images/review25.jpg');
 
 -- Reviews for Restaurant 6
-('CUST0026', 6, 'Amazing experience.', 4.8, 'images/review26.jpg'),
-('CUST0027', 6, 'Food was superb.', 4.7, 'images/review27.jpg'),
-('CUST0028', 6, 'Great place to dine.', 4.9, 'images/review28.jpg'),
-('CUST0029', 6, 'Nice staff and food.', 4.6, 'images/review29.jpg'),
-('CUST0030', 6, 'Highly recommend.', 4.5, 'images/review30.jpg'),
+('CUST0026', 6, 'The experience was good overall, but some dishes lacked the wow factor expected at this level. More innovative flavors and presentation would elevate the dining experience.', 4.8, 'images/review26.jpg'),
+('CUST0027', 6, 'Food quality was generally high, but there were inconsistencies in portion sizes across dishes. Ensuring consistent portions would improve customer satisfaction.', 4.7, 'images/review27.jpg'),
+('CUST0028', 6, 'While the restaurant is well-regarded, the ambiance could be more inviting. Updating decor or seating arrangements would create a more comfortable dining environment.', 4.9, 'images/review28.jpg'),
+('CUST0029', 6, 'Staff were friendly, but service was slow at times. Improving efficiency during peak hours would enhance the overall dining experience.', 4.6, 'images/review29.jpg'),
+('CUST0030', 6, 'Recommended by many, but the noise level was too high for a relaxed meal. Implementing soundproofing or quieter seating options would benefit patrons.', 4.5, 'images/review30.jpg'),
 
 -- Reviews for Restaurant 7
-('CUST0031', 7, 'Good food and nice place.', 4.2, 'images/review31.jpg'),
-('CUST0032', 7, 'Enjoyed my meal.', 4.0, 'images/review32.jpg'),
-('CUST0033', 7, 'Service was good.', 4.1, 'images/review33.jpg'),
-('CUST0034', 7, 'Loved the desserts.', 4.3, 'images/review34.jpg'),
-('CUST0035', 7, 'Will visit again.', 4.4, 'images/review35.jpg'),
+('CUST0031', 7, 'The food was decent, but the atmosphere lacked charm. Updating the decor or lighting could improve the overall dining ambiance.', 4.2, 'images/review31.jpg'),
+('CUST0032', 7, 'Enjoyed the meal, but some dishes were overcooked. Ensuring consistent cooking times would enhance the dining experience.', 4.0, 'images/review32.jpg'),
+('CUST0033', 7, 'Service was attentive, but there were delays in getting orders taken. Streamlining service processes would improve efficiency.', 4.1, 'images/review33.jpg'),
+('CUST0034', 7, 'Desserts were delicious, but main courses lacked variety. Expanding the menu options would cater to a broader range of tastes.', 4.3, 'images/review34.jpg'),
+('CUST0035', 7, 'Will consider visiting again, but the restaurant was crowded and noisy. Better crowd management or seating arrangements would enhance the dining experience.', 4.4, 'images/review35.jpg'),
 
 -- Reviews for Restaurant 8
-('CUST0036', 8, 'Nice ambiance and food.', 4.5, 'images/review36.jpg'),
-('CUST0037', 8, 'Service was excellent.', 4.6, 'images/review37.jpg'),
-('CUST0038', 8, 'Food was great.', 4.7, 'images/review38.jpg'),
-('CUST0039', 8, 'Had a wonderful time.', 4.8, 'images/review39.jpg'),
-('CUST0040', 8, 'Highly recommend.', 4.9, 'images/review40.jpg'),
+('CUST0036', 8, 'The ambiance was pleasant, but the temperature inside was too cold. Adjusting the climate control would improve comfort for diners.', 4.5, 'images/review36.jpg'),
+('CUST0037', 8, 'Service was efficient, but some dishes were underseasoned. Enhancing flavor profiles would elevate the dining experience.', 4.6, 'images/review37.jpg'),
+('CUST0038', 8, 'Food quality was good, but the menu lacked vegetarian options. Adding more diverse dishes would cater to a wider audience.', 4.7, 'images/review38.jpg'),
+('CUST0039', 8, 'Had a pleasant time overall, but the noise level made conversation difficult. Implementing noise reduction measures would improve the dining atmosphere.', 4.8, 'images/review39.jpg'),
+('CUST0040', 8, 'Highly recommended, but the prices were on the higher side. Offering more affordable options would attract more diners.', 4.9, 'images/review40.jpg'),
 
 -- Reviews for Restaurant 9
-('CUST0041', 9, 'Food was okay.', 3.5, 'images/review41.jpg'),
-('CUST0042', 9, 'Nice place to eat.', 3.8, 'images/review42.jpg'),
-('CUST0043', 9, 'Service was good.', 4.0, 'images/review43.jpg'),
-('CUST0044', 9, 'Loved the food.', 4.3, 'images/review44.jpg'),
-('CUST0045', 9, 'Would come again.', 4.2, 'images/review45.jpg'),
+('CUST0041', 9, 'The food was average, and some dishes lacked flavor. Improving seasoning and cooking techniques would enhance the taste.', 3.5, 'images/review41.jpg'),
+('CUST0042', 9, 'The restaurant had a nice ambiance, but the seating was uncomfortable. Upgrading seating arrangements would improve the dining experience.', 3.8, 'images/review42.jpg'),
+('CUST0043', 9, 'Service was satisfactory, but there were delays in getting orders served. Improving service speed would benefit patrons.', 4.0, 'images/review43.jpg'),
+('CUST0044', 9, 'Enjoyed the food, especially the desserts, but the menu options were limited. Expanding the menu would provide more choices for diners.', 4.3, 'images/review44.jpg'),
+('CUST0045', 9, 'Considering a return visit, but the noise level was disruptive. Implementing soundproofing solutions would create a more comfortable dining environment.', 4.2, 'images/review45.jpg'),
 
 -- Reviews for Restaurant 10
-('CUST0046', 10, 'Great food and service.', 4.4, 'images/review46.jpg'),
-('CUST0047', 10, 'Enjoyed the meal.', 4.5, 'images/review47.jpg'),
-('CUST0048', 10, 'Good place to dine.', 4.6, 'images/review48.jpg'),
-('CUST0049', 10, 'Will visit again.', 4.7, 'images/review49.jpg'),
-('CUST0050', 10, 'Loved the ambiance.', 4.8, 'images/review50.jpg'),
+('CUST0046', 10, 'The food and service were satisfactory, but the presentation could be improved. Enhancing dish presentation would elevate the dining experience.', 4.4, 'images/review46.jpg'),
+('CUST0047', 10, 'Enjoyed the meal, but the atmosphere felt a bit dull. Adding more decor or lighting elements would enhance the dining ambiance.', 4.5, 'images/review47.jpg'),
+('CUST0048', 10, 'Good place to dine, but the menu lacked variety. Increasing menu options would cater to different tastes and preferences.', 4.6, 'images/review48.jpg'),
+('CUST0049', 10, 'Will consider revisiting, but the service was slow during peak hours. Improving service efficiency would benefit diners.', 4.7, 'images/review49.jpg'),
+('CUST0050', 10, 'Loved the ambiance and decor, but the noise level was too high. Implementing noise reduction measures would improve the dining experience.', 4.8, 'images/review50.jpg');
 
 -- Reviews for Restaurant 11
 ('CUST0051', 11, 'Had a good time.', 4.0, 'images/review51.jpg'),
