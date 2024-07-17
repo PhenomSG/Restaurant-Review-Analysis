@@ -105,74 +105,74 @@ INSERT INTO RatingsReviews (customer_id, restaurant_id, review_text, rating, ima
 ('CUST0075', 15, 'Considering another visit, but the noise level was disruptive. Implementing noise reduction measures would improve the dining ambiance.', 4.4, 'images/review75.jpg');
 
 -- Reviews for Restaurant 16
-('CUST0076', 16, 'Great food and service.', 4.4, 'images/review76.jpg'),
-('CUST0077', 16, 'Enjoyed the meal.', 4.5, 'images/review77.jpg'),
-('CUST0078', 16, 'Good place to dine.', 4.6, 'images/review78.jpg'),
-('CUST0079', 16, 'Will visit again.', 4.7, 'images/review79.jpg'),
-('CUST0080', 16, 'Loved the ambiance.', 4.8, 'images/review80.jpg'),
+('CUST0076', 16, 'Food and service were good overall, but some dishes lacked seasoning. Adding more flavor would enhance the dining experience.', 4.4, 'images/review76.jpg'),
+('CUST0077', 16, 'Enjoyed the meal, but portions were smaller than expected. Increasing portion sizes would improve value for money.', 4.5, 'images/review77.jpg'),
+('CUST0078', 16, 'A good place to dine, but the ambiance was a bit noisy. Creating a quieter dining environment would be beneficial.', 4.6, 'images/review78.jpg'),
+('CUST0079', 16, 'Will consider another visit, but service was slow at peak times. Improving service efficiency during busy periods would enhance the experience.', 4.7, 'images/review79.jpg'),
+('CUST0080', 16, 'Loved the ambiance and overall experience, but dessert options were limited. Expanding the dessert menu would add variety.', 4.8, 'images/review80.jpg'),
 
 -- Reviews for Restaurant 17
-('CUST0081', 17, 'Had a good time.', 4.0, 'images/review81.jpg'),
-('CUST0082', 17, 'Food was nice.', 4.1, 'images/review82.jpg'),
-('CUST0083', 17, 'Service was okay.', 4.2, 'images/review83.jpg'),
-('CUST0084', 17, 'Nice place.', 4.3, 'images/review84.jpg'),
-('CUST0085', 17, 'Would recommend.', 4.4, 'images/review85.jpg'),
+('CUST0081', 17, 'Had a decent time, but food quality varied across dishes. Ensuring consistent quality would improve dining satisfaction.', 4.0, 'images/review81.jpg'),
+('CUST0082', 17, 'Food was satisfactory, but some dishes lacked depth in flavor. Enhancing seasoning and cooking techniques would elevate the experience.', 4.1, 'images/review82.jpg'),
+('CUST0083', 17, 'Service was adequate, but there were delays in getting orders taken. Improving service efficiency would benefit patrons.', 4.2, 'images/review83.jpg'),
+('CUST0084', 17, 'The restaurant has a nice ambiance, but seating was uncomfortable. Upgrading seating options would improve comfort for diners.', 4.3, 'images/review84.jpg'),
+('CUST0085', 17, 'Considering another visit, but noise levels were too high. Implementing noise reduction measures would create a more enjoyable dining atmosphere.', 4.4, 'images/review85.jpg'),
 
 -- Reviews for Restaurant 18
-('CUST0086', 18, 'Amazing food.', 4.7, 'images/review86.jpg'),
-('CUST0087', 18, 'Great service.', 4.6, 'images/review87.jpg'),
-('CUST0088', 18, 'Loved the food.', 4.8, 'images/review88.jpg'),
-('CUST0089', 18, 'Nice ambiance.', 4.5, 'images/review89.jpg'),
-('CUST0090', 18, 'Would come again.', 4.4, 'images/review90.jpg'),
+('CUST0086', 18, 'Food quality was good, but some dishes lacked seasoning. Enhancing flavor profiles would enhance the dining experience.', 4.7, 'images/review86.jpg'),
+('CUST0087', 18, 'Service was generally good, but there were occasional delays. Improving consistency in service would benefit overall satisfaction.', 4.6, 'images/review87.jpg'),
+('CUST0088', 18, 'Loved the food overall, but the ambiance felt a bit dated. Updating the decor would create a more modern dining atmosphere.', 4.8, 'images/review88.jpg'),
+('CUST0089', 18, 'Ambiance was pleasant, but lighting was too dim. Adjusting lighting levels would enhance the dining environment.', 4.5, 'images/review89.jpg'),
+('CUST0090', 18, 'Considering another visit, but noise levels were disruptive. Implementing noise reduction measures would improve the dining ambiance.', 4.4, 'images/review90.jpg'),
 
 -- Reviews for Restaurant 19
-('CUST0091', 19, 'Good food.', 4.0, 'images/review91.jpg'),
-('CUST0092', 19, 'Service was good.', 4.2, 'images/review92.jpg'),
-('CUST0093', 19, 'Nice place.', 4.1, 'images/review93.jpg'),
-('CUST0094', 19, 'Loved the desserts.', 4.3, 'images/review94.jpg'),
-('CUST0095', 19, 'Will visit again.', 4.4, 'images/review95.jpg'),
+('CUST0091', 19, 'Food quality was decent, but some dishes lacked flavor. Improving seasoning and ingredient quality would enhance taste.', 4.0, 'images/review91.jpg'),
+('CUST0092', 19, 'Service was satisfactory, but there were delays in getting orders taken. Enhancing service efficiency would benefit patrons.', 4.2, 'images/review92.jpg'),
+('CUST0093', 19, 'The restaurant had a nice ambiance, but seating was uncomfortable. Upgrading seating arrangements would improve comfort.', 4.1, 'images/review93.jpg'),
+('CUST0094', 19, 'Desserts were enjoyable, but main courses lacked variety. Expanding the menu would cater to diverse tastes.', 4.3, 'images/review94.jpg'),
+('CUST0095', 19, 'Considering another visit, but noise levels were too high. Implementing noise reduction measures would enhance the dining experience.', 4.4, 'images/review95.jpg'),
 
 -- Reviews for Restaurant 20
-('CUST0096', 20, 'Great food.', 4.6, 'images/review96.jpg'),
-('CUST0097', 20, 'Amazing experience.', 4.5, 'images/review97.jpg'),
-('CUST0098', 20, 'Loved the service.', 4.8, 'images/review98.jpg'),
-('CUST0099', 20, 'Nice ambiance.', 4.7, 'images/review99.jpg'),
-('CUST0100', 20, 'Would recommend.', 4.4, 'images/review100.jpg'),
+('CUST0096', 20, 'Food quality was good, but some dishes lacked seasoning. Enhancing flavor profiles would elevate the dining experience.', 4.6, 'images/review96.jpg'),
+('CUST0097', 20, 'Enjoyed the experience, but service was slow at times. Improving service efficiency would enhance customer satisfaction.', 4.5, 'images/review97.jpg'),
+('CUST0098', 20, 'Service was generally good, but there were delays in getting orders served. Enhancing service speed during peak hours would improve dining experience.', 4.8, 'images/review98.jpg'),
+('CUST0099', 20, 'Ambiance was pleasant, but seating arrangements were cramped. Providing more spacious seating options would improve comfort.', 4.7, 'images/review99.jpg'),
+('CUST0100', 20, 'Considering another visit, but noise levels were too high. Implementing noise reduction measures would create a more relaxing atmosphere.', 4.4, 'images/review100.jpg'),
 
 -- Reviews for Restaurant 21
-('CUST0101', 21, 'Good food.', 4.1, 'images/review101.jpg'),
-('CUST0102', 21, 'Service was okay.', 4.0, 'images/review102.jpg'),
-('CUST0103', 21, 'Nice place.', 4.2, 'images/review103.jpg'),
-('CUST0104', 21, 'Enjoyed the meal.', 4.3, 'images/review104.jpg'),
-('CUST0105', 21, 'Will visit again.', 4.4, 'images/review105.jpg'),
+('CUST0101', 21, 'Food quality was decent, but some dishes lacked depth in flavor. Enhancing seasoning would improve taste.', 4.1, 'images/review101.jpg'),
+('CUST0102', 21, 'Service was adequate, but there were delays in getting orders taken. Improving service efficiency would benefit patrons.', 4.0, 'images/review102.jpg'),
+('CUST0103', 21, 'The restaurant had a nice ambiance, but lighting was too dim. Adjusting lighting levels would create a more inviting dining environment.', 4.2, 'images/review103.jpg'),
+('CUST0104', 21, 'Enjoyed the meal, but some dishes were overcooked. Ensuring consistent cooking would enhance dining satisfaction.', 4.3, 'images/review104.jpg'),
+('CUST0105', 21, 'Considering another visit, but noise levels were disruptive. Implementing noise reduction measures would improve dining ambiance.', 4.4, 'images/review105.jpg'),
 
 -- Reviews for Restaurant 22
-('CUST0106', 22, 'Amazing food.', 4.7, 'images/review106.jpg'),
-('CUST0107', 22, 'Great service.', 4.6, 'images/review107.jpg'),
-('CUST0108', 22, 'Loved the food.', 4.8, 'images/review108.jpg'),
-('CUST0109', 22, 'Nice ambiance.', 4.5, 'images/review109.jpg'),
-('CUST0110', 22, 'Would come again.', 4.4, 'images/review110.jpg'),
+('CUST0106', 22, 'Food quality was good, but some dishes lacked seasoning. Enhancing flavor profiles would enhance the dining experience.', 4.7, 'images/review106.jpg'),
+('CUST0107', 22, 'Service was generally good, but there were occasional delays. Improving consistency in service would benefit overall satisfaction.', 4.6, 'images/review107.jpg'),
+('CUST0108', 22, 'Loved the food overall, but the ambiance felt a bit dated. Updating the decor would create a more modern dining atmosphere.', 4.8, 'images/review108.jpg'),
+('CUST0109', 22, 'Ambiance was pleasant, but lighting was too dim. Adjusting lighting levels would enhance the dining environment.', 4.5, 'images/review109.jpg'),
+('CUST0110', 22, 'Considering another visit, but noise levels were disruptive. Implementing noise reduction measures would improve dining ambiance.', 4.4, 'images/review110.jpg'),
 
 -- Reviews for Restaurant 23
-('CUST0111', 23, 'Good food.', 4.0, 'images/review111.jpg'),
-('CUST0112', 23, 'Service was good.', 4.2, 'images/review112.jpg'),
-('CUST0113', 23, 'Nice place.', 4.1, 'images/review113.jpg'),
-('CUST0114', 23, 'Loved the desserts.', 4.3, 'images/review114.jpg'),
-('CUST0115', 23, 'Will visit again.', 4.4, 'images/review115.jpg'),
+('CUST0111', 23, 'Food quality was decent, but some dishes lacked flavor. Improving seasoning and ingredient quality would enhance taste.', 4.0, 'images/review111.jpg'),
+('CUST0112', 23, 'Service was satisfactory, but there were delays in getting orders taken. Enhancing service efficiency would benefit patrons.', 4.2, 'images/review112.jpg'),
+('CUST0113', 23, 'The restaurant had a nice ambiance, but seating was uncomfortable. Upgrading seating arrangements would improve comfort.', 4.1, 'images/review113.jpg'),
+('CUST0114', 23, 'Desserts were enjoyable, but main courses lacked variety. Expanding the menu would cater to diverse tastes.', 4.3, 'images/review114.jpg'),
+('CUST0115', 23, 'Considering another visit, but noise levels were too high. Implementing noise reduction measures would enhance the dining experience.', 4.4, 'images/review115.jpg'),
 
 -- Reviews for Restaurant 24
-('CUST0116', 24, 'Great food.', 4.6, 'images/review116.jpg'),
-('CUST0117', 24, 'Amazing experience.', 4.5, 'images/review117.jpg'),
-('CUST0118', 24, 'Loved the service.', 4.8, 'images/review118.jpg'),
-('CUST0119', 24, 'Nice ambiance.', 4.7, 'images/review119.jpg'),
-('CUST0120', 24, 'Would recommend.', 4.4, 'images/review120.jpg'),
+('CUST0116', 24, 'Food quality was good, but some dishes lacked seasoning. Enhancing flavor profiles would elevate the dining experience.', 4.6, 'images/review116.jpg'),
+('CUST0117', 24, 'Enjoyed the experience, but service was slow at times. Improving service efficiency would enhance customer satisfaction.', 4.5, 'images/review117.jpg'),
+('CUST0118', 24, 'Service was generally good, but there were delays in getting orders served. Enhancing service speed during peak hours would improve dining experience.', 4.8, 'images/review118.jpg'),
+('CUST0119', 24, 'Ambiance was pleasant, but seating arrangements were cramped. Providing more spacious seating options would improve comfort.', 4.7, 'images/review119.jpg'),
+('CUST0120', 24, 'Considering another visit, but noise levels were too high. Implementing noise reduction measures would create a more relaxing atmosphere.', 4.4, 'images/review120.jpg'),
 
 -- Reviews for Restaurant 25
-('CUST0121', 25, 'Good food.', 4.1, 'images/review121.jpg'),
-('CUST0122', 25, 'Service was okay.', 4.0, 'images/review122.jpg'),
-('CUST0123', 25, 'Nice place.', 4.2, 'images/review123.jpg'),
-('CUST0124', 25, 'Enjoyed the meal.', 4.3, 'images/review124.jpg'),
-('CUST0125', 25, 'Will visit again.', 4.4, 'images/review125.jpg'),
+('CUST0121', 25, 'Food quality was decent, but some dishes lacked depth in flavor. Enhancing seasoning would improve taste.', 4.1, 'images/review121.jpg'),
+('CUST0122', 25, 'Service was adequate, but there were delays in getting orders taken. Improving service efficiency would benefit patrons.', 4.0, 'images/review122.jpg'),
+('CUST0123', 25, 'The restaurant had a nice ambiance, but lighting was too dim. Adjusting lighting levels would create a more inviting dining environment.', 4.2, 'images/review123.jpg'),
+('CUST0124', 25, 'Enjoyed the meal, but some dishes were overcooked. Ensuring consistent cooking would enhance dining satisfaction.', 4.3, 'images/review124.jpg'),
+('CUST0125', 25, 'Considering another visit, but noise levels were disruptive. Implementing noise reduction measures would improve dining ambiance.', 4.4, 'images/review125.jpg');
 
 -- Reviews for Restaurant 26
 ('CUST0126', 26, 'Amazing food.', 4.7, 'images/review126.jpg'),
