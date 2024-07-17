@@ -14,7 +14,7 @@ CREATE TABLE Restaurants (
 );
 
 -- Create the Contact Information table
-CREATE TABLE ContactInformation (
+CREATE TABLE RestrauContactInfo (
     restaurant_id INT NOT NULL,
     phone_number VARCHAR(20),
     website VARCHAR(255),
