@@ -1,0 +1,56 @@
+Restaurant Names
+
+1. Toit Brewpub
+2. The Black Rabbit
+3. The Fatty Bao
+4. MTR 1924
+5. Koshy's
+6. Arbor Brewing Company
+7. Corner House
+8. Airlines Hotel
+9. Vidyaarthi Bhavan
+10. Truffles
+11. Brahmin's Coffee Bar
+12. Sri Sagar (CTR)
+13. Nagarjuna
+14. Meghana Foods
+15. Shivaji Military Hotel
+16. Karavalli
+17. Chinita Real Mexican Food
+18. Church Street Social
+19. Sunny's
+20. Little Italy
+21. Rim Naam
+22. Edo Japanese Restaurant and Bar
+23. Mikusu
+24. Persian Terrace
+25. SodaBottleOpenerWala
+26. Rajdhani Thali Restaurant
+27. The Humming Tree
+28. JW Kitchen
+29. Karama Restaurant
+30. Italia
+31. The Biere Club
+32. Jalsa Gold
+33. Sattvam
+34. Dum Pukht Jolly Nabobs
+35. Tandoor
+36. Byg Brewski Brewing Company
+37. Ebony
+38. The 13th Floor
+39. Oota
+40. Vidyarthi Bhavan
+41. Alto Vino
+42. Ssaffron (Sheraton Grand)
+43. Paranda
+44. Peshawri
+45. Masala Klub
+46. Lapis
+47. Cubbon Pavilion
+48. Ssaffron (Sheraton Grand - duplicate name but different address)
+49. Blue Ginger
+50. Blue Ginger (Duplicate name but different address)
+51. Hakuna Matata
+52. Thalassery restaurant
+53. Udupi Swada
+54. Dwaraka Grand
