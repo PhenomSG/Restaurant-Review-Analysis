@@ -287,64 +287,64 @@ INSERT INTO RatingsReviews (customer_id, restaurant_id, review_text, rating, ima
 ('CUST0205', 41, 'Our experience at Restaurant 41 was positive overall. The food quality was good, and the menu offered a variety of options. The service was efficient, although a bit rushed at times. The ambiance was comfortable and inviting. I would rate it 4.4 out of 5. It is definitely a place we would consider returning to for another dining experience.', 4.4, 'images/review205.jpg');
 
 -- Reviews for Restaurant 42
-('CUST0206', 42, 'Amazing food.', 4.7, 'images/review206.jpg'),
-('CUST0207', 42, 'Great service.', 4.6, 'images/review207.jpg'),
-('CUST0208', 42, 'Loved the food.', 4.8, 'images/review208.jpg'),
-('CUST0209', 42, 'Nice ambiance.', 4.5, 'images/review209.jpg'),
-('CUST0210', 42, 'Would come again.', 4.4, 'images/review210.jpg'),
+('CUST0206', 42, 'The food at this restaurant is consistently amazing. Every dish we tried was delicious, especially their signature dishes. The service is great too, attentive without being intrusive. The ambiance is cozy and perfect for a nice evening out. I would definitely recommend this place to anyone looking for a delightful dining experience.', 4.7, 'images/review206.jpg'),
+('CUST0207', 42, 'We had a great experience here! The service was friendly and efficient, and the food was delicious. I particularly enjoyed the ambiance, which was relaxing and inviting. Overall, a wonderful place to dine.', 4.6, 'images/review207.jpg'),
+('CUST0208', 42, 'I loved everything about this restaurant! The food was absolutely fantastic, and the flavors were incredible. The service was top-notch, and the staff was very friendly. The ambiance was perfect for a special occasion. I would definitely come back again!', 4.8, 'images/review208.jpg'),
+('CUST0209', 42, 'The ambiance of this place is very nice, with a relaxed and welcoming atmosphere. The food was delicious, and the service was excellent. It's a great spot for a cozy meal with friends or family.', 4.5, 'images/review209.jpg'),
+('CUST0210', 42, 'I would definitely come back to this restaurant! The food was delicious, and the service was excellent. The ambiance was cozy and inviting. Overall, a great dining experience.', 4.4, 'images/review210.jpg'),
 
 -- Reviews for Restaurant 43
-('CUST0211', 43, 'Good food.', 4.0, 'images/review211.jpg'),
-('CUST0212', 43, 'Service was good.', 4.2, 'images/review212.jpg'),
-('CUST0213', 43, 'Nice place.', 4.1, 'images/review213.jpg'),
-('CUST0214', 43, 'Loved the desserts.', 4.3, 'images/review214.jpg'),
-('CUST0215', 43, 'Will visit again.', 4.4, 'images/review215.jpg'),
+('CUST0211', 43, 'The food here is good, with a nice variety of options. The service was good as well, attentive and friendly. The ambiance is pleasant and comfortable, making it a nice place to dine.', 4.0, 'images/review211.jpg'),
+('CUST0212', 43, 'The service was good, and the staff was friendly and helpful. The food quality was above average, and I enjoyed the overall experience. A decent place to visit.', 4.2, 'images/review212.jpg'),
+('CUST0213', 43, 'Nice place with a cozy atmosphere. The food was good, and the service was attentive. It's a decent spot for a casual meal.', 4.1, 'images/review213.jpg'),
+('CUST0214', 43, 'I loved the desserts here! They were delicious and well-presented. The overall experience was pleasant, and I would recommend trying their desserts.', 4.3, 'images/review214.jpg'),
+('CUST0215', 43, 'I enjoyed my visit and would consider coming back. The food was good, and the service was friendly. Overall, a nice experience.', 4.4, 'images/review215.jpg'),
 
 -- Reviews for Restaurant 44
-('CUST0216', 44, 'Great food.', 4.6, 'images/review216.jpg'),
-('CUST0217', 44, 'Amazing experience.', 4.5, 'images/review217.jpg'),
-('CUST0218', 44, 'Loved the service.', 4.8, 'images/review218.jpg'),
-('CUST0219', 44, 'Nice ambiance.', 4.7, 'images/review219.jpg'),
-('CUST0220', 44, 'Would recommend.', 4.4, 'images/review220.jpg'),
+('CUST0216', 44, 'The food was great, with a good variety of options to choose from. The service was efficient and friendly. Overall, a pleasant dining experience.', 4.6, 'images/review216.jpg'),
+('CUST0217', 44, 'We had an amazing experience at this restaurant. The food was delicious, and the service was excellent. The ambiance was cozy and perfect for a relaxed meal.', 4.5, 'images/review217.jpg'),
+('CUST0218', 44, 'I loved the service here! The staff was very attentive and accommodating. The food was also excellent, with great flavors and presentation.', 4.8, 'images/review218.jpg'),
+('CUST0219', 44, 'The ambiance of this place is really nice, with a comfortable and inviting atmosphere. The food quality was above average, and the service was prompt and friendly.', 4.7, 'images/review219.jpg'),
+('CUST0220', 44, 'I would definitely recommend this restaurant. The food was delicious, and the overall experience was enjoyable. A great place for a meal with friends or family.', 4.4, 'images/review220.jpg'),
 
 -- Reviews for Restaurant 45
-('CUST0221', 45, 'Good food.', 4.1, 'images/review221.jpg'),
-('CUST0222', 45, 'Service was okay.', 4.0, 'images/review222.jpg'),
-('CUST0223', 45, 'Nice place.', 4.2, 'images/review223.jpg'),
-('CUST0224', 45, 'Enjoyed the meal.', 4.3, 'images/review224.jpg'),
-('CUST0225', 45, 'Will visit again.', 4.4, 'images/review225.jpg'),
+('CUST0221', 45, 'The food was good, with tasty options on the menu. The service was okay, although a bit slow at times. The ambiance was pleasant, making it a decent place for a casual meal.', 4.1, 'images/review221.jpg'),
+('CUST0222', 45, 'The service here was okay, and the staff was friendly. The food quality was decent, although not exceptional. Overall, a satisfactory dining experience.', 4.0, 'images/review222.jpg'),
+('CUST0223', 45, 'Nice place with a cozy atmosphere. The food was good, and the service was attentive. It is a decent spot for a casual meal.', 4.2, 'images/review223.jpg'),
+('CUST0224', 45, 'I enjoyed the meal here. The food was tasty, and the service was efficient. The ambiance was nice, making it a good place to dine.', 4.3, 'images/review224.jpg'),
+('CUST0225', 45, 'I would visit again. The food was good, and the service was friendly. Overall, a pleasant dining experience.', 4.4, 'images/review225.jpg'),
 
 -- Reviews for Restaurant 46
-('CUST0226', 46, 'Amazing food.', 4.7, 'images/review226.jpg'),
-('CUST0227', 46, 'Great service.', 4.6, 'images/review227.jpg'),
-('CUST0228', 46, 'Loved the food.', 4.8, 'images/review228.jpg'),
-('CUST0229', 46, 'Nice ambiance.', 4.5, 'images/review229.jpg'),
-('CUST0230', 46, 'Would come again.', 4.4, 'images/review230.jpg'),
+('CUST0226', 46, 'The food here is amazing, with delicious options on the menu. The service was great, with attentive and friendly staff. The ambiance was pleasant and inviting.', 4.7, 'images/review226.jpg'),
+('CUST0227', 46, 'We had a great service experience at this restaurant. The staff was friendly and efficient. The food quality was excellent, and the ambiance was cozy.', 4.6, 'images/review227.jpg'),
+('CUST0228', 46, 'I loved the food here! The flavors were outstanding, and the presentation was impressive. The service was also excellent, making it a memorable dining experience.', 4.8, 'images/review228.jpg'),
+('CUST0229', 46, 'The ambiance of this restaurant is nice, with a comfortable and relaxed atmosphere. The food was delicious, and the service was attentive.', 4.5, 'images/review229.jpg'),
+('CUST0230', 46, 'I would definitely come back to this restaurant. The food was delicious, and the service was great. Overall, a fantastic dining experience.', 4.4, 'images/review230.jpg'),
 
 -- Reviews for Restaurant 47
-('CUST0231', 47, 'Good food.', 4.0, 'images/review231.jpg'),
-('CUST0232', 47, 'Service was good.', 4.2, 'images/review232.jpg'),
-('CUST0233', 47, 'Nice place.', 4.1, 'images/review233.jpg'),
-('CUST0234', 47, 'Loved the desserts.', 4.3, 'images/review234.jpg'),
-('CUST0235', 47, 'Will visit again.', 4.4, 'images/review235.jpg'),
+('CUST0231', 47, 'The food here is good, with a decent variety of options. The service was good as well, attentive and friendly. The ambiance is nice and casual.', 4.0, 'images/review231.jpg'),
+('CUST0232', 47, 'The service was good, and the staff was friendly and helpful. The food quality was above average, and I enjoyed the overall experience. A decent place to dine.', 4.2, 'images/review232.jpg'),
+('CUST0233', 47, 'Nice place with a cozy atmosphere. The food was good, and the service was attentive. It is a decent spot for a casual meal.', 4.1, 'images/review233.jpg'),
+('CUST0234', 47, 'The desserts here are delicious! I loved the variety and taste. The overall dining experience was pleasant, and I would recommend trying their desserts.', 4.3, 'images/review234.jpg'),
+('CUST0235', 47, 'I would visit again. The food was good, and the service was friendly. Overall, a satisfactory dining experience.', 4.4, 'images/review235.jpg'),
 
 -- Reviews for Restaurant 48
-('CUST0236', 48, 'Great food.', 4.6, 'images/review236.jpg'),
-('CUST0237', 48, 'Amazing experience.', 4.5, 'images/review237.jpg'),
-('CUST0238', 48, 'Loved the service.', 4.8, 'images/review238.jpg'),
-('CUST0239', 48, 'Nice ambiance.', 4.7, 'images/review239.jpg'),
-('CUST0240', 48, 'Would recommend.', 4.4, 'images/review240.jpg'),
+('CUST0236', 48, 'The food was great, with a good selection of dishes. The service was efficient and friendly. Overall, a pleasant dining experience.', 4.6, 'images/review236.jpg'),
+('CUST0237', 48, 'We had an amazing experience at this restaurant. The food was delicious, and the service was excellent. The ambiance was cozy and perfect for a relaxed meal.', 4.5, 'images/review237.jpg'),
+('CUST0238', 48, 'The service here was outstanding! The staff was very attentive and accommodating. The food quality was also excellent, with great flavors and presentation.', 4.8, 'images/review238.jpg'),
+('CUST0239', 48, 'The ambiance of this place is really nice, with a comfortable and inviting atmosphere. The food quality was above average, and the service was prompt and friendly.', 4.7, 'images/review239.jpg'),
+('CUST0240', 48, 'I would definitely recommend this restaurant. The food was delicious, and the overall experience was enjoyable. A great place for a meal with friends or family.', 4.4, 'images/review240.jpg'),
 
 -- Reviews for Restaurant 49
-('CUST0241', 49, 'Good food.', 4.1, 'images/review241.jpg'),
-('CUST0242', 49, 'Service was okay.', 4.0, 'images/review242.jpg'),
-('CUST0243', 49, 'Nice place.', 4.2, 'images/review243.jpg'),
-('CUST0244', 49, 'Enjoyed the meal.', 4.3, 'images/review244.jpg'),
-('CUST0245', 49, 'Will visit again.', 4.4, 'images/review245.jpg'),
+('CUST0241', 49, 'The food was good, with tasty options on the menu. The service was okay, although a bit slow at times. The ambiance was pleasant, making it a decent place for a casual meal.', 4.1, 'images/review241.jpg'),
+('CUST0242', 49, 'The service here was okay, and the staff was friendly. The food quality was decent, although not exceptional. Overall, a satisfactory dining experience.', 4.0, 'images/review242.jpg'),
+('CUST0243', 49, 'Nice place with a cozy atmosphere. The food was good, and the service was attentive. It is a decent spot for a casual meal.', 4.2, 'images/review243.jpg'),
+('CUST0244', 49, 'I enjoyed the meal here. The food was tasty, and the service was efficient. The ambiance was nice, making it a good place to dine.', 4.3, 'images/review244.jpg'),
+('CUST0245', 49, 'I would visit again. The food was good, and the service was friendly. Overall, a pleasant dining experience.', 4.4, 'images/review245.jpg'),
 
 -- Reviews for Restaurant 50
-('CUST0246', 50, 'Amazing food.', 4.7, 'images/review246.jpg'),
-('CUST0247', 50, 'Great service.', 4.6, 'images/review247.jpg'),
-('CUST0248', 50, 'Loved the food.', 4.8, 'images/review248.jpg'),
-('CUST0249', 50, 'Nice ambiance.', 4.5, 'images/review249.jpg'),
-('CUST0250', 50, 'Would come again.', 4.4, 'images/review250.jpg');
+('CUST0246', 50, 'The food at this restaurant is consistently amazing. Every dish we tried was delicious, especially their signature dishes. The service is great too, attentive without being intrusive. The ambiance is cozy and perfect for a nice evening out. I would definitely recommend this place to anyone looking for a delightful dining experience.', 4.7, 'images/review246.jpg'),
+('CUST0247', 50, 'We had a great experience here! The service was friendly and efficient, and the food was delicious. I particularly enjoyed the ambiance, which was relaxing and inviting. Overall, a wonderful place to dine.', 4.6, 'images/review247.jpg'),
+('CUST0248', 50, 'I loved everything about this restaurant! The food was absolutely fantastic, and the flavors were incredible. The service was top-notch, and the staff was very friendly. The ambiance was perfect for a special occasion. I would definitely come back again!', 4.8, 'images/review248.jpg'),
+('CUST0249', 50, 'The ambiance of this place is very nice, with a relaxed and welcoming atmosphere. The food was delicious, and the service was excellent. It is a great spot for a cozy meal with friends or family.', 4.5, 'images/review249.jpg'),
+('CUST0250', 50, 'I would definitely come back to this restaurant! The food was delicious, and the service was excellent. The ambiance was cozy and inviting. Overall, a great dining experience.', 4.4, 'images/review250.jpg');
