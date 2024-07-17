@@ -1,22 +1,51 @@
-import mysql.connector
+import mysql.connector as ms
+from connection import is_connected, get_database_connection
 from transformers import BertTokenizer, BertForSequenceClassification
 import torch
 import numpy as np
 
 # Connect to the MySQL database
 def get_reviews_from_db():
-    conn = mysql.connector.connect(
-        host="your_host",
-        user="your_username",
-        password="your_password",
-        database="your_database"
-    )
-    cursor = conn.cursor()
-    cursor.execute("SELECT review_text FROM restaurant_reviews")
-    reviews = cursor.fetchall()
-    cursor.close()
-    conn.close()
-    return [review[0] for review in reviews]
+    flag = is_connected()
+    # print(flag)
+
+    # Database to be used
+    db = "restaurantreviewdb"
+    db_tables = ["employees","departments","projects","employee_project","salaries"]
+    print(f"Using {db} Database")
+    print(f"All actions will happen inside {db} database")
+
+    if flag:
+        try:
+            # Checking if connected
+            connection = get_database_connection()
+            cursor = connection.cursor()
+
+            # Selecting the database
+            cursor.execute(f"USE {db};")
+            print(f"Database changed to {db}")
+
+            # Sample query to test the connection
+            cursor.execute("SHOW TABLES;")
+            tables = cursor.fetchall()
+            print("Tables in the database:", tables)
+            cursor.execute("SELECT review_text FROM RatingsReviews")
+            reviews = cursor.fetchall()
+            cursor.close()
+            ls =  [review[0] for review in reviews]
+            for res in ls:
+                print(res)
+            return ls
+        except ms.Error as e:
+            print(f"Error: {e}")
+        finally:
+            if connection.is_connected():
+                cursor.close()
+                connection.close()
+    else:
+        print("Failed to connect to MySQL")
+
+    #return [review[0] for review in reviews]
 
 # Load pre-trained BERT model and tokenizer
 def load_bert_model():
