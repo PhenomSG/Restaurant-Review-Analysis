@@ -251,3 +251,100 @@ INSERT INTO RatingsReviews (customer_id, restaurant_id, review_text, rating, ima
 ('CUST0179', 36, 'Nice ambiance.', 4.7, 'images/review179.jpg'),
 ('CUST0180', 36, 'Would recommend.', 4.4, 'images/review180.jpg'),
 
+-- Reviews for Restaurant 37
+('CUST0181', 37, 'Good food.', 4.1, 'images/review181.jpg'),
+('CUST0182', 37, 'Service was okay.', 4.0, 'images/review182.jpg'),
+('CUST0183', 37, 'Nice place.', 4.2, 'images/review183.jpg'),
+('CUST0184', 37, 'Enjoyed the meal.', 4.3, 'images/review184.jpg'),
+('CUST0185', 37, 'Will visit again.', 4.4, 'images/review185.jpg'),
+
+-- Reviews for Restaurant 38
+('CUST0186', 38, 'Amazing food.', 4.7, 'images/review186.jpg'),
+('CUST0187', 38, 'Great service.', 4.6, 'images/review187.jpg'),
+('CUST0188', 38, 'Loved the food.', 4.8, 'images/review188.jpg'),
+('CUST0189', 38, 'Nice ambiance.', 4.5, 'images/review189.jpg'),
+('CUST0190', 38, 'Would come again.', 4.4, 'images/review190.jpg'),
+
+-- Reviews for Restaurant 39
+('CUST0191', 39, 'Good food.', 4.0, 'images/review191.jpg'),
+('CUST0192', 39, 'Service was good.', 4.2, 'images/review192.jpg'),
+('CUST0193', 39, 'Nice place.', 4.1, 'images/review193.jpg'),
+('CUST0194', 39, 'Loved the desserts.', 4.3, 'images/review194.jpg'),
+('CUST0195', 39, 'Will visit again.', 4.4, 'images/review195.jpg'),
+
+-- Reviews for Restaurant 40
+('CUST0196', 40, 'Great food.', 4.6, 'images/review196.jpg'),
+('CUST0197', 40, 'Amazing experience.', 4.5, 'images/review197.jpg'),
+('CUST0198', 40, 'Loved the service.', 4.8, 'images/review198.jpg'),
+('CUST0199', 40, 'Nice ambiance.', 4.7, 'images/review199.jpg'),
+('CUST0200', 40, 'Would recommend.', 4.4, 'images/review200.jpg'),
+
+-- Reviews for Restaurant 41
+('CUST0201', 41, 'Good food.', 4.1, 'images/review201.jpg'),
+('CUST0202', 41, 'Service was okay.', 4.0, 'images/review202.jpg'),
+('CUST0203', 41, 'Nice place.', 4.2, 'images/review203.jpg'),
+('CUST0204', 41, 'Enjoyed the meal.', 4.3, 'images/review204.jpg'),
+('CUST0205', 41, 'Will visit again.', 4.4, 'images/review205.jpg'),
+
+-- Reviews for Restaurant 42
+('CUST0206', 42, 'Amazing food.', 4.7, 'images/review206.jpg'),
+('CUST0207', 42, 'Great service.', 4.6, 'images/review207.jpg'),
+('CUST0208', 42, 'Loved the food.', 4.8, 'images/review208.jpg'),
+('CUST0209', 42, 'Nice ambiance.', 4.5, 'images/review209.jpg'),
+('CUST0210', 42, 'Would come again.', 4.4, 'images/review210.jpg'),
+
+-- Reviews for Restaurant 43
+('CUST0211', 43, 'Good food.', 4.0, 'images/review211.jpg'),
+('CUST0212', 43, 'Service was good.', 4.2, 'images/review212.jpg'),
+('CUST0213', 43, 'Nice place.', 4.1, 'images/review213.jpg'),
+('CUST0214', 43, 'Loved the desserts.', 4.3, 'images/review214.jpg'),
+('CUST0215', 43, 'Will visit again.', 4.4, 'images/review215.jpg'),
+
+-- Reviews for Restaurant 44
+('CUST0216', 44, 'Great food.', 4.6, 'images/review216.jpg'),
+('CUST0217', 44, 'Amazing experience.', 4.5, 'images/review217.jpg'),
+('CUST0218', 44, 'Loved the service.', 4.8, 'images/review218.jpg'),
+('CUST0219', 44, 'Nice ambiance.', 4.7, 'images/review219.jpg'),
+('CUST0220', 44, 'Would recommend.', 4.4, 'images/review220.jpg'),
+
+-- Reviews for Restaurant 45
+('CUST0221', 45, 'Good food.', 4.1, 'images/review221.jpg'),
+('CUST0222', 45, 'Service was okay.', 4.0, 'images/review222.jpg'),
+('CUST0223', 45, 'Nice place.', 4.2, 'images/review223.jpg'),
+('CUST0224', 45, 'Enjoyed the meal.', 4.3, 'images/review224.jpg'),
+('CUST0225', 45, 'Will visit again.', 4.4, 'images/review225.jpg'),
+
+-- Reviews for Restaurant 46
+('CUST0226', 46, 'Amazing food.', 4.7, 'images/review226.jpg'),
+('CUST0227', 46, 'Great service.', 4.6, 'images/review227.jpg'),
+('CUST0228', 46, 'Loved the food.', 4.8, 'images/review228.jpg'),
+('CUST0229', 46, 'Nice ambiance.', 4.5, 'images/review229.jpg'),
+('CUST0230', 46, 'Would come again.', 4.4, 'images/review230.jpg'),
+
+-- Reviews for Restaurant 47
+('CUST0231', 47, 'Good food.', 4.0, 'images/review231.jpg'),
+('CUST0232', 47, 'Service was good.', 4.2, 'images/review232.jpg'),
+('CUST0233', 47, 'Nice place.', 4.1, 'images/review233.jpg'),
+('CUST0234', 47, 'Loved the desserts.', 4.3, 'images/review234.jpg'),
+('CUST0235', 47, 'Will visit again.', 4.4, 'images/review235.jpg'),
+
+-- Reviews for Restaurant 48
+('CUST0236', 48, 'Great food.', 4.6, 'images/review236.jpg'),
+('CUST0237', 48, 'Amazing experience.', 4.5, 'images/review237.jpg'),
+('CUST0238', 48, 'Loved the service.', 4.8, 'images/review238.jpg'),
+('CUST0239', 48, 'Nice ambiance.', 4.7, 'images/review239.jpg'),
+('CUST0240', 48, 'Would recommend.', 4.4, 'images/review240.jpg'),
+
+-- Reviews for Restaurant 49
+('CUST0241', 49, 'Good food.', 4.1, 'images/review241.jpg'),
+('CUST0242', 49, 'Service was okay.', 4.0, 'images/review242.jpg'),
+('CUST0243', 49, 'Nice place.', 4.2, 'images/review243.jpg'),
+('CUST0244', 49, 'Enjoyed the meal.', 4.3, 'images/review244.jpg'),
+('CUST0245', 49, 'Will visit again.', 4.4, 'images/review245.jpg'),
+
+-- Reviews for Restaurant 50
+('CUST0246', 50, 'Amazing food.', 4.7, 'images/review246.jpg'),
+('CUST0247', 50, 'Great service.', 4.6, 'images/review247.jpg'),
+('CUST0248', 50, 'Loved the food.', 4.8, 'images/review248.jpg'),
+('CUST0249', 50, 'Nice ambiance.', 4.5, 'images/review249.jpg'),
+('CUST0250', 50, 'Would come again.', 4.4, 'images/review250.jpg');
