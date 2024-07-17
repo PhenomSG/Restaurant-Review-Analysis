@@ -41,16 +41,17 @@ Restaurant Names
 39. Oota
 40. Vidyarthi Bhavan
 41. Alto Vino
-42. Ssaffron (Sheraton Grand)
+42. MTR
 43. Paranda
 44. Peshawri
 45. Masala Klub
 46. Lapis
 47. Cubbon Pavilion
-48. Ssaffron (Sheraton Grand - duplicate name but different address)
-49. Blue Ginger
-50. Blue Ginger (Duplicate name but different address)
+48. New Krishna Bhavan
+49. Sankalp
+50. Sattvam
 51. Hakuna Matata
 52. Thalassery restaurant
 53. Udupi Swada
 54. Dwaraka Grand
+55. Udupi Krishna Bhavan
