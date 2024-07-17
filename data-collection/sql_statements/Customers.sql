@@ -79,7 +79,7 @@ INSERT INTO Customers (customer_id, customer_email) VALUES
 ('CUST0078', 'sarika.shah@gmail.com'),
 ('CUST0079', 'vinay.kumar@gmail.com'),
 ('CUST0080', 'rekha.iyer@gmail.com'),
-('CUST0081', 'alok.sharma@gmail.com'),
+('CUST0081', 'alok.verma@gmail.com'),
 ('CUST0082', 'deepa.kulkarni@gmail.com'),
 ('CUST0083', 'ajay.nair@gmail.com'),
 ('CUST0084', 'suman.rao@gmail.com'),
@@ -148,7 +148,7 @@ INSERT INTO Customers (customer_id, customer_email) VALUES
 ('CUST0147', 'deepa.shah@gmail.com'),
 ('CUST0148', 'rajesh.verma@gmail.com'),
 ('CUST0149', 'usha.kumar@gmail.com'),
-('CUST0150', 'meena.nair@gmail.com');
+('CUST0150', 'meena.nair@gmail.com'),
 ('CUST0151', 'arun.sharma151@gmail.com'),
 ('CUST0152', 'meena.patel152@gmail.com'),
 ('CUST0153', 'rahul.verma153@gmail.com'),
