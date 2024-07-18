@@ -76,6 +76,14 @@ def main():
     tokenizer, model = load_bert_model()
     average_sentiment = calculate_average_sentiment(reviews, tokenizer, model)
     print(f"Average sentiment rating: {average_sentiment}")
+    # Normalizing the score to the range 1-5
+    # sentiment scores range from 0 to 1
+    normalized_score = np.interp(average_sentiment, [0, 1], [1, 5])
+
+    # Rounding normalized score to the nearest integer
+    integer_rating = int(round(normalized_score))
+
+    print(f"Average sentiment rating: {integer_rating}")
 
 if __name__ == "__main__":
     main()
