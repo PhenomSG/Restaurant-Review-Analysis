@@ -14,6 +14,9 @@ from dotenv import load_dotenv
 load_dotenv()
 google_api_key = os.getenv('GOOGLE_API_KEY')
 
+import google.generativeai as genai
+genai.configure(api_key=google_api_key)
+
 
 # Custom connection functions (replace with your own)
 from connection import is_connected, get_database_connection
