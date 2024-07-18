@@ -14,6 +14,9 @@ from dotenv import load_dotenv
 from PIL import Image
 import base64
 
+# Custom connection functions 
+from connection import is_connected, get_database_connection
+
 # ALWAYS MUST BE THE FIRST COMMAND
 # Set page configuration
 st.set_page_config(
@@ -44,9 +47,6 @@ background_css = f"""
 
 # Inject CSS into the Streamlit app
 st.markdown(background_css, unsafe_allow_html=True)
-
-# Custom connection functions (replace with your own)
-from connection import is_connected, get_database_connection
 
 st.title("Welcome to Restaurant Review Analysis System!")
 
