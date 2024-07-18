@@ -196,6 +196,9 @@ if choice == "Reviews":
                 st.write(f"**Plus Code:** {plus_code}")
                 
                 # Display map
+                # not so good or even accurate
+                # Geocoding api will be added in future
+                # abhi ke liye itna hi kaafi hai 
                 location_map = folium.Map(location=[12.9716, 77.5946], zoom_start=12)
                 folium.Marker([12.9716, 77.5946], tooltip="Restaurant Location").add_to(location_map)
                 st_folium(location_map, width=700, height=500)
