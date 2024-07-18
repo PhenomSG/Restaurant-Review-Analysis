@@ -324,7 +324,7 @@ elif choice == "Analysis":
                                "and how can we improve it. If data is not given, just improvise and give something.")
             bert_rating_review = (f"{integer_rating} out of 5 is the rating given by BERT model on the reviews. "
                                   "Explain why BERT gave this rating and what can be done to improve it.")
-            word_cloud = "make a word cloud like highlighting the most important things in the reviews.no image needed.just state highlights and keywords"
+            word_cloud = "make a word cloud like highlighting the most important things in the reviews.just state highlights and keywords"
             prompt = full_reviews + additional_info + bert_rating_review + word_cloud
             
             response = model.generate_content(prompt)
