@@ -11,7 +11,7 @@ def get_reviews_from_db():
 
     # Database to be used
     db = "restaurantreviewdb"
-    db_tables = ["employees","departments","projects","employee_project","salaries"]
+    db_tables = ["Restaurants","Customers","RestrauContactInfo","RatingsReviews"]
     print(f"Using {db} Database")
     print(f"All actions will happen inside {db} database")
 

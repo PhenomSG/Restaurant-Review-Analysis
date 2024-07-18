@@ -7,6 +7,12 @@ import PIL as img
 import requests
 from io import BytesIO 
 import base64
+import mysql.connector as ms
+#from transformers import BertTokenizer, BertForSequenceClassification
+import torch
+import numpy as np
+from connection import is_connected, get_database_connection
+import base64
 
 # Set page configuration
 st.set_page_config(
@@ -64,8 +70,37 @@ if choice == "Home":
         """
     )
 
-# SidePage
-elif choice == "Reviews":
+# Function to get reviews from the database
+def get_reviews_from_db():
+    flag = is_connected()
+    db = "restaurantreviewdb"
+    if flag:
+        try:
+            connection = get_database_connection()
+            cursor = connection.cursor()
+            cursor.execute(f"USE {db};")
+            cursor.execute("SELECT review_text FROM RatingsReviews")
+            reviews = cursor.fetchall()
+            cursor.close()
+            return [review[0] for review in reviews]
+        except ms.Error as e:
+            print(f"Error: {e}")
+        finally:
+            if connection.is_connected():
+                connection.close()
+    else:
+        print("Failed to connect to MySQL")
+    return []
+
+# Reviews Page
+if choice == "Reviews":
+    st.header("Recent Reviews")
+    reviews = get_reviews_from_db()
+    if reviews:
+        for review in reviews:
+            st.write(f"- {review}")
+    else:
+        st.write("No reviews found.")
 
     def generate_restaurant_data(num_restaurants):
         data = {
@@ -78,16 +113,6 @@ elif choice == "Reviews":
 
     bangalore_restaurants = generate_restaurant_data(10)
     
-    # recent reviews
-    st.header("Recent Reviews")
-    st.write("""
-        Here are some of the most recent reviews from our users:
-
-        - **Udupi 1**: "Excellent food and service!"
-        - **Udupi 2**: "Average experience, could be better."
-        - **Udupi 3**: "Delicious food, but service was slow."
-    """)
-
     # Reviews stats section
     st.header("Reviews Statistics")
     st.write(f"""
@@ -95,10 +120,9 @@ elif choice == "Reviews":
         ### Total Reviews: {bangalore_restaurants['Reviews'].sum()}
     """)
 
-    # dataframe of restrau
+    # Dataframe of restaurants
     st.header("Restaurants in Bangalore")
     st.dataframe(bangalore_restaurants)
-
 
 # About Us Page
 elif choice == "About Us":
@@ -124,7 +148,6 @@ elif choice == "About Us":
         """
     )
 
-
 # Contact Us Page
 elif choice == "Contact Us":
     st.write(
@@ -145,6 +168,4 @@ elif choice == "Analysis":
         """
         ## Analysis
         """
-
     )
-
