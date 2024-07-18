@@ -101,10 +101,10 @@ def get_reviews_for_restaurant(restaurant_id):
             connection = get_database_connection()
             cursor = connection.cursor()
             cursor.execute(f"USE {db};")
-            cursor.execute("SELECT review_text FROM RatingsReviews WHERE restaurant_id = %s", (restaurant_id,))
+            cursor.execute("SELECT customer_id, review_text, rating FROM RatingsReviews WHERE restaurant_id = %s", (restaurant_id,))
             reviews = cursor.fetchall()
             cursor.close()
-            return [review[0] for review in reviews]
+            return reviews
         except ms.Error as e:
             print(f"Error: {e}")
         finally:
@@ -148,8 +148,9 @@ if choice == "Reviews":
             st.header("Recent Reviews")
             reviews = get_reviews_for_restaurant(restaurant_id)
             if reviews:
-                for review in reviews:
-                    st.write(f"- {review}")
+                for customer_id, review_text, rating in reviews:
+                    st.write(f"**Customer ID:** {customer_id} | **Rating:** {rating}")
+                    st.write(f"- {review_text}")
             else:
                 st.write("No reviews found.")
             
