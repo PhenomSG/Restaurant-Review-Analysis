@@ -70,8 +70,8 @@ if choice == "Home":
         """
     )
 
-# Function to get reviews from the database
-def get_reviews_from_db():
+# Function to get restaurant names from the database
+def get_restaurant_names():
     flag = is_connected()
     db = "restaurantreviewdb"
     if flag:
@@ -79,7 +79,29 @@ def get_reviews_from_db():
             connection = get_database_connection()
             cursor = connection.cursor()
             cursor.execute(f"USE {db};")
-            cursor.execute("SELECT review_text FROM RatingsReviews")
+            cursor.execute("SELECT restaurant_id, name FROM Restaurants")
+            restaurants = cursor.fetchall()
+            cursor.close()
+            return {name: restaurant_id for restaurant_id, name in restaurants}
+        except ms.Error as e:
+            print(f"Error: {e}")
+        finally:
+            if connection.is_connected():
+                connection.close()
+    else:
+        print("Failed to connect to MySQL")
+    return {}
+
+# Function to get reviews for a specific restaurant from the database
+def get_reviews_for_restaurant(restaurant_id):
+    flag = is_connected()
+    db = "restaurantreviewdb"
+    if flag:
+        try:
+            connection = get_database_connection()
+            cursor = connection.cursor()
+            cursor.execute(f"USE {db};")
+            cursor.execute("SELECT review_text FROM RatingsReviews WHERE restaurant_id = %s", (restaurant_id,))
             reviews = cursor.fetchall()
             cursor.close()
             return [review[0] for review in reviews]
@@ -92,37 +114,56 @@ def get_reviews_from_db():
         print("Failed to connect to MySQL")
     return []
 
+# Function to get contact info for a specific restaurant from the database
+def get_contact_info_for_restaurant(restaurant_id):
+    flag = is_connected()
+    db = "restaurantreviewdb"
+    if flag:
+        try:
+            connection = get_database_connection()
+            cursor = connection.cursor()
+            cursor.execute(f"USE {db};")
+            cursor.execute("SELECT phone_number, website, email FROM RestrauContactInfo WHERE restaurant_id = %s", (restaurant_id,))
+            contact_info = cursor.fetchone()
+            cursor.close()
+            return contact_info
+        except ms.Error as e:
+            print(f"Error: {e}")
+        finally:
+            if connection.is_connected():
+                connection.close()
+    else:
+        print("Failed to connect to MySQL")
+    return None
+
 # Reviews Page
 if choice == "Reviews":
-    st.header("Recent Reviews")
-    reviews = get_reviews_from_db()
-    if reviews:
-        for review in reviews:
-            st.write(f"- {review}")
+    st.header("Select a Restaurant")
+    restaurants = get_restaurant_names()
+    if restaurants:
+        selected_restaurant = st.selectbox("Choose a restaurant", list(restaurants.keys()))
+        if selected_restaurant:
+            restaurant_id = restaurants[selected_restaurant]
+            
+            st.header("Recent Reviews")
+            reviews = get_reviews_for_restaurant(restaurant_id)
+            if reviews:
+                for review in reviews:
+                    st.write(f"- {review}")
+            else:
+                st.write("No reviews found.")
+            
+            st.header("Contact Information")
+            contact_info = get_contact_info_for_restaurant(restaurant_id)
+            if contact_info:
+                phone_number, website, email = contact_info
+                st.write(f"**Phone Number:** {phone_number}")
+                st.write(f"**Website:** {website}")
+                st.write(f"**Email:** {email}")
+            else:
+                st.write("No contact information found.")
     else:
-        st.write("No reviews found.")
-
-    def generate_restaurant_data(num_restaurants):
-        data = {
-            "Restaurant Name": [f"Udupi {i+1}" for i in range(num_restaurants)],
-            "Location": ["Bangalore" for _ in range(num_restaurants)],
-            "Rating": np.random.randint(1, 6, size=num_restaurants),
-            "Reviews": np.random.randint(50, 1000, size=num_restaurants)
-        }
-        return pd.DataFrame(data)
-
-    bangalore_restaurants = generate_restaurant_data(10)
-    
-    # Reviews stats section
-    st.header("Reviews Statistics")
-    st.write(f"""
-        ### Average Rating: {bangalore_restaurants['Rating'].mean():.2f}
-        ### Total Reviews: {bangalore_restaurants['Reviews'].sum()}
-    """)
-
-    # Dataframe of restaurants
-    st.header("Restaurants in Bangalore")
-    st.dataframe(bangalore_restaurants)
+        st.write("No restaurants found.")
 
 # About Us Page
 elif choice == "About Us":
