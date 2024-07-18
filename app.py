@@ -46,8 +46,8 @@ choice = st.sidebar.selectbox("Menu", sidebar_options)
 if choice == "Home":
     st.write(
         """
-        ## Hum Kaun hai!
-        # chutiye --
+        ## RESTAURANT
+        # GROUP 16 --
         We review delicious dishes from around the world.
         """
     )
