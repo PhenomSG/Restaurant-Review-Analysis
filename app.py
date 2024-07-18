@@ -1,4 +1,6 @@
 # importing dependencies
+import folium
+from streamlit_folium import st_folium
 import streamlit as st
 import time
 import numpy as np
@@ -70,7 +72,7 @@ if choice == "Home":
         """
     )
 
-# Function to get restaurant names from the database
+# Function to get restaurant names and IDs from the database
 def get_restaurant_names():
     flag = is_connected()
     db = "restaurantreviewdb"
@@ -136,6 +138,28 @@ def get_contact_info_for_restaurant(restaurant_id):
         print("Failed to connect to MySQL")
     return None
 
+# Function to get address and plus code for a specific restaurant from the database
+def get_address_pluscode_for_restaurant(restaurant_id):
+    flag = is_connected()
+    db = "restaurantreviewdb"
+    if flag:
+        try:
+            connection = get_database_connection()
+            cursor = connection.cursor()
+            cursor.execute(f"USE {db};")
+            cursor.execute("SELECT address, plus_code FROM Restaurants WHERE restaurant_id = %s", (restaurant_id,))
+            address_pluscode = cursor.fetchone()
+            cursor.close()
+            return address_pluscode
+        except ms.Error as e:
+            print(f"Error: {e}")
+        finally:
+            if connection.is_connected():
+                connection.close()
+    else:
+        print("Failed to connect to MySQL")
+    return None
+
 # Reviews Page
 if choice == "Reviews":
     st.header("Select a Restaurant")
@@ -163,6 +187,23 @@ if choice == "Reviews":
                 st.write(f"**Email:** {email}")
             else:
                 st.write("No contact information found.")
+            
+            st.header("Address and Location")
+            address_pluscode = get_address_pluscode_for_restaurant(restaurant_id)
+            if address_pluscode:
+                address, plus_code = address_pluscode
+                st.write(f"**Address:** {address}")
+                st.write(f"**Plus Code:** {plus_code}")
+                
+                # Display map
+                # not so good or even accurate
+                # Geocoding api will be added in future
+                # abhi ke liye itna hi kaafi hai 
+                location_map = folium.Map(location=[12.9716, 77.5946], zoom_start=12)
+                folium.Marker([12.9716, 77.5946], tooltip="Restaurant Location").add_to(location_map)
+                st_folium(location_map, width=700, height=500)
+            else:
+                st.write("No address information found.")
     else:
         st.write("No restaurants found.")
 
