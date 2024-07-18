@@ -11,11 +11,10 @@ import google.generativeai as genai
 from IPython.display import Markdown
 import os
 from dotenv import load_dotenv
+from PIL import Image
+import base64
 
-
-# Custom connection functions (replace with your own)
-from connection import is_connected, get_database_connection
-
+# ALWAYS MUST BE THE FIRST COMMAND
 # Set page configuration
 st.set_page_config(
     page_title="Sahaj",
@@ -23,6 +22,31 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+# Path to your image
+background_image_path = r"E:\Sentiment_Analysis_Using_NLP\background.jpg"  
+
+# Function to convert an image file to a base64 string
+def image_to_base64(image_path):
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode()
+
+# Define the CSS for the background image
+background_css = f"""
+<style>
+    .stApp {{
+        background-image: url("data:image/jpeg;base64,{image_to_base64(background_image_path)}");
+        background-size: cover;
+        background-position: center;
+    }}
+</style>
+"""
+
+# Inject CSS into the Streamlit app
+st.markdown(background_css, unsafe_allow_html=True)
+
+# Custom connection functions (replace with your own)
+from connection import is_connected, get_database_connection
 
 st.title("Welcome to Restaurant Review Analysis System!")
 
