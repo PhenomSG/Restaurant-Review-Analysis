@@ -263,12 +263,12 @@ elif choice == "Analysis":
                 cursor.close()
                 return {name: restaurant_id for restaurant_id, name in restaurants}
             except ms.Error as e:
-                print(f"Error: {e}")
+                st.error(f"Error: {e}")
             finally:
                 if connection.is_connected():
                     connection.close()
         else:
-            print("Failed to connect to MySQL")
+            st.error("Failed to connect to MySQL")
         return {}
 
     # Function to fetch reviews for a specific restaurant from the database
@@ -285,12 +285,12 @@ elif choice == "Analysis":
                 cursor.close()
                 return [review[0] for review in reviews]
             except ms.Error as e:
-                print(f"Error: {e}")
+                st.error(f"Error: {e}")
             finally:
                 if connection.is_connected():
                     connection.close()
         else:
-            print("Failed to connect to MySQL")
+            st.error("Failed to connect to MySQL")
         return []
 
     # Function to load BERT model and tokenizer
@@ -310,17 +310,32 @@ elif choice == "Analysis":
 
     # Function to calculate average sentiment rating for reviews
     def calculate_average_sentiment(reviews, tokenizer, model):
-        sentiments = []
-        for review in reviews:
-            sentiment = analyze_sentiment(tokenizer, model, review)
-            sentiments.append(sentiment)
-        if sentiments:
-            return np.mean(sentiments)
-        else:
-            return None
+        sentiments = [analyze_sentiment(tokenizer, model, review) for review in reviews]
+        return np.mean(sentiments) if sentiments else None
 
-    # Fetch restaurant names from database
+    # Function to generate content using Gemini API
+    def generate_reviews_of_restaurants(reviews, integer_rating):
+        try:
+            model = genai.GenerativeModel('gemini-pro')
+            
+            # Joining reviews into a single prompt
+            full_reviews = " ".join(reviews)
+            additional_info = (" according to these reviews, tell what is good in the restaurant, what is bad, "
+                               "and how can we improve it. If data is not given, just improvise and give something.")
+            bert_rating_review = (f"{integer_rating} out of 5 is the rating given by BERT model on the reviews. "
+                                  "Explain why BERT gave this rating and what can be done to improve it.")
+            word_cloud = "make a word cloud like highlighting the most important things in the reviews.no image needed.just state highlights and keywords"
+            prompt = full_reviews + additional_info + bert_rating_review + word_cloud
+            
+            response = model.generate_content(prompt)
+            
+            return response.text
+        except Exception as e:
+            return f"Error generating content: {e}"
+
+    # Fetch restaurant names from the database
     restaurants = get_restaurant_names()
+
     if restaurants:
         restaurant_names = list(restaurants.keys())
         selected_restaurant = st.selectbox("Select a Restaurant", restaurant_names)
@@ -341,106 +356,14 @@ elif choice == "Analysis":
                 normalized_score = np.interp(average_sentiment, [0, 1], [1, 5])
                 integer_rating = round(normalized_score, 1)
                 st.subheader(f"Average Sentiment Rating for {selected_restaurant}: {integer_rating}/5")
+                
+                # Button to generate insights using Gemini API
+                if st.button("Generate Gemini Insights"):
+                    rating_content = generate_reviews_of_restaurants(reviews, integer_rating)
+                    st.markdown(textwrap.indent(rating_content, '> ', predicate=lambda _: True))
             else:
                 st.subheader(f"Average Sentiment Rating for {selected_restaurant}: N/A")
         else:
             st.write("No reviews found for this restaurant.")
     else:
         st.write("No restaurants found in the database.")
-
-    # Load environment variables
-    load_dotenv()
-    google_api_key = os.getenv('GOOGLE_API_KEY')
-
-    # Configure Google Generative AI
-    genai.configure(api_key=google_api_key)
-
-    # Function to fetch restaurant names from the database
-    def get_restaurant_names():
-        flag = is_connected()
-        db = "restaurantreviewdb"
-        if flag:
-            try:
-                connection = get_database_connection()
-                cursor = connection.cursor()
-                cursor.execute(f"USE {db};")
-                cursor.execute("SELECT restaurant_id, name FROM Restaurants")
-                restaurants = cursor.fetchall()
-                cursor.close()
-                return {name: restaurant_id for restaurant_id, name in restaurants}
-            except ms.Error as e:
-                print(f"Error: {e}")
-            finally:
-                if connection.is_connected():
-                    connection.close()
-        else:
-            print("Failed to connect to MySQL")
-        return {}
-
-    # Function to fetch reviews from the database based on selected restaurant
-    def get_reviews_for_restaurant(restaurant_id):
-        flag = is_connected()
-        db = "restaurantreviewdb"
-        if flag:
-            try:
-                connection = get_database_connection()
-                cursor = connection.cursor()
-                cursor.execute(f"USE {db};")
-                cursor.execute("SELECT review_text FROM RatingsReviews WHERE restaurant_id = %s", (restaurant_id,))
-                reviews = cursor.fetchall()
-                cursor.close()
-                return [review[0] for review in reviews]
-            except ms.Error as e:
-                print(f"Error: {e}")
-            finally:
-                if connection.is_connected():
-                    connection.close()
-        else:
-            print("Failed to connect to MySQL")
-        return []
-
-    # Function to generate content using Gemini API
-    def generate_reviews_of_restaurants(reviews):
-        try:
-            # Initialize the generative model
-            model = genai.GenerativeModel('gemini-pro')
-            
-            # Joining reviews into a single prompt
-            full_reviews = " ".join(reviews)
-            additional_info = "according to these reviews, tell what is good in the restaurant, what is bad, and how can we improve it.if data is not given just improvise and give something"
-            bert_rating_review = str(integer_rating) + "out of 5 is the rating given by BERT model on these"
-            prompt = full_reviews + additional_info + bert_rating_review
-            
-            # Generate content
-            response = model.generate_content(prompt)
-            
-            return response.text
-        except Exception as e:
-            return f"Error generating content: {e}"
-
-    # Streamlit app
-    st.title("Restaurant Review Generator")
-
-    # Fetch restaurant names from the database
-    restaurants = get_restaurant_names()
-
-    # Dropdown menu to select a restaurant
-    selected_restaurant = st.selectbox("Select a Restaurant", list(restaurants.keys()))
-
-    # Button to generate reviews
-    if st.button("Gemini Thinking"):
-        # Get restaurant ID from selected restaurant name
-        restaurant_id = restaurants[selected_restaurant]
-        
-        # Get reviews for the selected restaurant from the database
-        reviews = get_reviews_for_restaurant(restaurant_id)
-        
-        if reviews:
-            # Generate ratings based on reviews using Gemini API
-            rating_content = generate_reviews_of_restaurants(reviews)
-            
-            # Display results
-            st.markdown(textwrap.indent(rating_content, '> ', predicate=lambda _: True))
-        else:
-            st.write("No reviews found for this restaurant.")
-
