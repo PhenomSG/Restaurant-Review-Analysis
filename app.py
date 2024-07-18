@@ -2,24 +2,18 @@
 import folium
 from streamlit_folium import st_folium
 import streamlit as st
-import time
 import numpy as np
-import pandas as pd
-import PIL as img
-import requests
-from io import BytesIO 
-import base64
 import mysql.connector as ms
-#from transformers import BertTokenizer, BertForSequenceClassification
+from transformers import BertTokenizer, BertForSequenceClassification
 import torch
-import numpy as np
+
+# Custom connection functions (replace with your own)
 from connection import is_connected, get_database_connection
-import base64
 
 # Set page configuration
 st.set_page_config(
     page_title="Sahaj",
-    page_icon="🥘",     # rasode mein kaun tha
+    page_icon="🥘",  # rasode mein kaun tha
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -34,7 +28,7 @@ choice = st.sidebar.selectbox("Menu", sidebar_options)
 if choice == "Home":
     st.write("## RESTAURANT")
     st.write("Welcome to our platform, where we review delicious dishes from around the world.")
-    
+
     st.write("## Why We're Making This Project")
     st.write(
         """
@@ -43,7 +37,7 @@ if choice == "Home":
         on Google or Yelp, which often highlight only the extremes, our analysis delves deeper into the nuances of customer feedback.
         """
     )
-    
+
     st.write("## Our Unique Approach")
     st.write(
         """
@@ -52,7 +46,7 @@ if choice == "Home":
         - Suggestions for improvement tailored to each restaurant's unique challenges.
         """
     )
-    
+
     st.write("## Features")
     st.write(
         """
@@ -61,7 +55,7 @@ if choice == "Home":
         - Actionable advice for restaurant owners to improve their services.
         """
     )
-    
+
     st.write("## How We Differ from Google or Yelp Reviews")
     st.write(
         """
@@ -168,7 +162,7 @@ if choice == "Reviews":
         selected_restaurant = st.selectbox("Choose a restaurant", list(restaurants.keys()))
         if selected_restaurant:
             restaurant_id = restaurants[selected_restaurant]
-            
+
             st.header("Recent Reviews")
             reviews = get_reviews_for_restaurant(restaurant_id)
             if reviews:
@@ -177,7 +171,7 @@ if choice == "Reviews":
                     st.write(f"- {review_text}")
             else:
                 st.write("No reviews found.")
-            
+
             st.header("Contact Information")
             contact_info = get_contact_info_for_restaurant(restaurant_id)
             if contact_info:
@@ -187,18 +181,16 @@ if choice == "Reviews":
                 st.write(f"**Email:** {email}")
             else:
                 st.write("No contact information found.")
-            
+
             st.header("Address and Location")
             address_pluscode = get_address_pluscode_for_restaurant(restaurant_id)
             if address_pluscode:
                 address, plus_code = address_pluscode
                 st.write(f"**Address:** {address}")
                 st.write(f"**Plus Code:** {plus_code}")
-                
+
                 # Display map
-                # not so good or even accurate
-                # Geocoding api will be added in future
-                # abhi ke liye itna hi kaafi hai 
+                # Replace with accurate latitude and longitude from your database
                 location_map = folium.Map(location=[12.9716, 77.5946], zoom_start=12)
                 folium.Marker([12.9716, 77.5946], tooltip="Restaurant Location").add_to(location_map)
                 st_folium(location_map, width=700, height=500)
@@ -213,24 +205,21 @@ elif choice == "About Us":
         """
         ## About Us
 
-        ##### Welcome to **Restaurant Reviews Analysis System**! We are passionate about food and dedicated to helping people discover the best dining experiences. Our mission is to provide valuable insights and information about restaurants to empower users in making informed decisions when choosing where to dine.
+        Welcome to **Restaurant Reviews Analysis System**! We are passionate about food and dedicated to helping people discover the best dining experiences. Our mission is to provide valuable insights and information about restaurants to empower users in making informed decisions when choosing where to dine.
 
-        ##### At Restaurant Reviews Analysis System, we gather reviews from various sources, analyze them to extract meaningful insights, and present them to you in a user-friendly format.
+        At Restaurant Reviews Analysis System, we gather reviews from various sources, analyze them to extract meaningful insights, and present them to you in a user-friendly format.
 
-        ##### Whether you're searching for the top-rated restaurants in your city or exploring new dining options, we've got you covered.
+        Whether you're searching for the top-rated restaurants in your city or exploring new dining options, we've got you covered.
 
-        ##### We believe that good food brings people together and creates unforgettable memories. Join us on our journey to explore the culinary world and discover your next favorite restaurant!
+        We believe that good food brings people together and creates unforgettable memories. Join us on our journey to explore the culinary world and discover your next favorite restaurant!
 
-        ##### *If you have any questions or feedback, please don't hesitate to reach out to us. We would love to hear from you!*
-
-        
+        *If you have any questions or feedback, please don't hesitate to reach out to us. We would love to hear from you!*
 
         **Happy dining!**
 
         *The Restaurant Reviews Analysis System Team*
         """
     )
-
 
 # Contact Us Page
 elif choice == "Contact Us":
@@ -249,12 +238,22 @@ elif choice == "Contact Us":
         """
     )
 
-
 # Analysis Page
 elif choice == "Analysis":
-    st.write(
-        """
-        ## Analysis
-        """
-        
-    )
+    st.title("Restaurant Review Analysis System")
+    # st.header("Analysis")
+    st.header("Select a Restaurant")
+    restaurants = get_restaurant_names()
+    if restaurants:
+        selected_restaurant = st.selectbox("Choose a restaurant", list(restaurants.keys()))
+        if selected_restaurant:
+            restaurant_id = restaurants[selected_restaurant]
+
+            st.header("Recent Reviews")
+            reviews = get_reviews_for_restaurant(restaurant_id)
+            if reviews:
+                for customer_id, review_text, rating in reviews:
+                    st.write(f"**Customer ID:** {customer_id} | **Rating:** {rating}")
+                    st.write(f"- {review_text}")
+    else:
+        st.write("No Restaurants Found")
