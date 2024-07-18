@@ -6,6 +6,12 @@ import numpy as np
 import mysql.connector as ms
 from transformers import BertTokenizer, BertForSequenceClassification
 import torch
+import textwrap
+import google.generativeai as genai
+from IPython.display import Markdown
+import os
+from dotenv import load_dotenv
+
 
 # Custom connection functions (replace with your own)
 from connection import is_connected, get_database_connection
@@ -241,19 +247,123 @@ elif choice == "Contact Us":
 # Analysis Page
 elif choice == "Analysis":
     st.title("Restaurant Review Analysis System")
-    # st.header("Analysis")
-    st.header("Select a Restaurant")
-    restaurants = get_restaurant_names()
-    if restaurants:
-        selected_restaurant = st.selectbox("Choose a restaurant", list(restaurants.keys()))
-        if selected_restaurant:
-            restaurant_id = restaurants[selected_restaurant]
+    st.header("Analysis")
 
-            st.header("Recent Reviews")
-            reviews = get_reviews_for_restaurant(restaurant_id)
-            if reviews:
-                for customer_id, review_text, rating in reviews:
-                    st.write(f"**Customer ID:** {customer_id} | **Rating:** {rating}")
-                    st.write(f"- {review_text}")
+    # Function to fetch restaurant names from the database
+    def get_restaurant_names():
+        flag = is_connected()
+        db = "restaurantreviewdb"
+        if flag:
+            try:
+                connection = get_database_connection()
+                cursor = connection.cursor()
+                cursor.execute(f"USE {db};")
+                cursor.execute("SELECT restaurant_id, name FROM Restaurants")
+                restaurants = cursor.fetchall()
+                cursor.close()
+                return {name: restaurant_id for restaurant_id, name in restaurants}
+            except ms.Error as e:
+                st.error(f"Error: {e}")
+            finally:
+                if connection.is_connected():
+                    connection.close()
+        else:
+            st.error("Failed to connect to MySQL")
+        return {}
+
+    # Function to fetch reviews for a specific restaurant from the database
+    def get_reviews_for_restaurant(restaurant_id):
+        flag = is_connected()
+        db = "restaurantreviewdb"
+        if flag:
+            try:
+                connection = get_database_connection()
+                cursor = connection.cursor()
+                cursor.execute(f"USE {db};")
+                cursor.execute("SELECT review_text FROM RatingsReviews WHERE restaurant_id = %s", (restaurant_id,))
+                reviews = cursor.fetchall()
+                cursor.close()
+                return [review[0] for review in reviews]
+            except ms.Error as e:
+                st.error(f"Error: {e}")
+            finally:
+                if connection.is_connected():
+                    connection.close()
+        else:
+            st.error("Failed to connect to MySQL")
+        return []
+
+    # Function to load BERT model and tokenizer
+    def load_bert_model():
+        model_name = "bert-base-uncased"
+        tokenizer = BertTokenizer.from_pretrained(model_name)
+        model = BertForSequenceClassification.from_pretrained(model_name, num_labels=2)
+        return tokenizer, model
+
+    # Function to perform sentiment analysis using BERT
+    def analyze_sentiment(tokenizer, model, review):
+        inputs = tokenizer(review, return_tensors="pt", truncation=True, padding=True)
+        outputs = model(**inputs)
+        probabilities = torch.nn.functional.softmax(outputs.logits, dim=-1)
+        positive_prob = probabilities[0][1].item()
+        return positive_prob
+
+    # Function to calculate average sentiment rating for reviews
+    def calculate_average_sentiment(reviews, tokenizer, model):
+        sentiments = [analyze_sentiment(tokenizer, model, review) for review in reviews]
+        return np.mean(sentiments) if sentiments else None
+
+    # Function to generate content using Gemini API
+    def generate_reviews_of_restaurants(reviews, integer_rating):
+        try:
+            model = genai.GenerativeModel('gemini-pro')
+            
+            # Joining reviews into a single prompt
+            full_reviews = " ".join(reviews)
+            additional_info = (" according to these reviews, tell what is good in the restaurant, what is bad, "
+                               "and how can we improve it. If data is not given, just improvise and give something.")
+            bert_rating_review = (f"{integer_rating} out of 5 is the rating given by BERT model on the reviews. "
+                                  "Explain why BERT gave this rating and what can be done to improve it.")
+            word_cloud = "make a word cloud like highlighting the most important things in the reviews.just state highlights and keywords"
+            prompt = full_reviews + additional_info + bert_rating_review + word_cloud
+            
+            response = model.generate_content(prompt)
+            
+            return response.text
+        except Exception as e:
+            return f"Error generating content: {e}"
+
+    # Fetch restaurant names from the database
+    restaurants = get_restaurant_names()
+
+    if restaurants:
+        restaurant_names = list(restaurants.keys())
+        selected_restaurant = st.selectbox("Select a Restaurant", restaurant_names)
+
+        # Fetch reviews for selected restaurant
+        restaurant_id = restaurants[selected_restaurant]
+        reviews = get_reviews_for_restaurant(restaurant_id)
+
+        if reviews:
+            # Load BERT model and tokenizer
+            tokenizer, model = load_bert_model()
+
+            # Calculate average sentiment rating
+            average_sentiment = calculate_average_sentiment(reviews, tokenizer, model)
+
+            if average_sentiment is not None:
+                # Normalize sentiment score to range 1-5
+                normalized_score = np.interp(average_sentiment, [0, 1], [1, 5])
+                integer_rating = round(normalized_score, 1)
+                st.subheader(f"Average Sentiment Rating for {selected_restaurant}: {integer_rating}/5")
+                
+                # Button to generate insights using Gemini API
+                if st.button("Generate Gemini Insights"):
+                    rating_content = generate_reviews_of_restaurants(reviews, integer_rating)
+                    st.markdown(textwrap.indent(rating_content, '> ', predicate=lambda _: True))
+            else:
+                st.subheader(f"Average Sentiment Rating for {selected_restaurant}: N/A")
+        else:
+            st.write("No reviews found for this restaurant.")
     else:
-        st.write("No Restaurants Found")
+        st.write("No restaurants found in the database.")
