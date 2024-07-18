@@ -16,39 +16,51 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-def get_base64(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-def set_background(png_file):
-    bin_str = get_base64(png_file)
-    page_bg_img = '''
-    <style>
-    .stApp {
-    background-image: url("data:image/png;base64,%s");
-    background-size: cover;
-    }
-    </style>
-    ''' % bin_str
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-
-set_background("E:/Sentiment_Analysis_Using_NLP/foodie.jpg")
-
-
 st.title("Welcome to Restaurant Review Analysis System!")
 
-sidebar_options = ["Home", "Reviews", "About Us", "Contact Us"]
+sidebar_options = ["Home", "Reviews", "Analysis", "About Us", "Contact Us"]
 
 choice = st.sidebar.selectbox("Menu", sidebar_options)
 
 # Home Page
 if choice == "Home":
+    st.write("## RESTAURANT")
+    st.write("Welcome to our platform, where we review delicious dishes from around the world.")
+    
+    st.write("## Why We're Making This Project")
     st.write(
         """
-        ## RESTAURANT
-        # GROUP 16 --
-        We review delicious dishes from around the world.
+        Many restaurant owners struggle to understand what is working and what needs improvement in their establishments. 
+        Our project aims to bridge this gap by providing comprehensive reviews and actionable insights. Unlike typical reviews 
+        on Google or Yelp, which often highlight only the extremes, our analysis delves deeper into the nuances of customer feedback.
+        """
+    )
+    
+    st.write("## Our Unique Approach")
+    st.write(
+        """
+        - Detailed analysis of customer reviews to uncover hidden trends.
+        - Clear reasoning behind the ratings provided.
+        - Suggestions for improvement tailored to each restaurant's unique challenges.
+        """
+    )
+    
+    st.write("## Features")
+    st.write(
+        """
+        - Comprehensive rating system based on sentiment analysis.
+        - Insightful breakdown of strengths and weaknesses.
+        - Actionable advice for restaurant owners to improve their services.
+        """
+    )
+    
+    st.write("## How We Differ from Google or Yelp Reviews")
+    st.write(
+        """
+        Our reviews are not just about star ratings or brief comments. We provide:
+        - In-depth analysis using advanced natural language processing techniques.
+        - A balanced view that considers both positive and negative feedback.
+        - Professional recommendations for enhancing the dining experience.
         """
     )
 
@@ -127,4 +139,12 @@ elif choice == "Contact Us":
         """
     )
 
+# Analysis Page
+elif choice == "Analysis":
+    st.write(
+        """
+        ## Analysis
+        """
+
+    )
 
