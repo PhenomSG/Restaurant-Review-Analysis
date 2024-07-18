@@ -26,7 +26,7 @@ st.set_page_config(
 
 st.title("Welcome to Restaurant Review Analysis System!")
 
-sidebar_options = ["Home", "Reviews", "Analysis", "About Us", "Contact Us"]
+sidebar_options = ["Home", "Reviews", "Analysis", "Image Analysis", "About Us", "Contact Us"]
 
 choice = st.sidebar.selectbox("Menu", sidebar_options)
 
