@@ -213,23 +213,24 @@ elif choice == "About Us":
         """
         ## About Us
 
-        Welcome to Restaurant Reviews Analysis System! We are passionate about food and helping people discover the best dining experiences.
+        ##### Welcome to **Restaurant Reviews Analysis System**! We are passionate about food and dedicated to helping people discover the best dining experiences. Our mission is to provide valuable insights and information about restaurants to empower users in making informed decisions when choosing where to dine.
 
-        Our mission is to provide valuable insights and information about restaurants to help users make informed decisions when choosing where to dine. 
+        ##### At Restaurant Reviews Analysis System, we gather reviews from various sources, analyze them to extract meaningful insights, and present them to you in a user-friendly format.
 
-        At Restaurant Reviews Analysis System, we aggregate reviews from various sources, analyze them to extract meaningful insights, and present them to you in a user-friendly format.
+        ##### Whether you're searching for the top-rated restaurants in your city or exploring new dining options, we've got you covered.
 
-        Whether you're looking for the top-rated restaurants in your city or want to explore new dining options, we've got you covered. 
+        ##### We believe that good food brings people together and creates unforgettable memories. Join us on our journey to explore the culinary world and discover your next favorite restaurant!
 
-        We believe that good food brings people together and creates unforgettable memories. Join us in our journey to explore the culinary world and discover your next favorite restaurant!
+        ##### *If you have any questions or feedback, please don't hesitate to reach out to us. We would love to hear from you!*
 
-        If you have any questions or feedback, feel free to reach out to us. We'd love to hear from you!
+        
 
-        Happy dining!
+        **Happy dining!**
 
-        The Restaurant Reviews Analysis System Team
+        *The Restaurant Reviews Analysis System Team*
         """
     )
+
 
 # Contact Us Page
 elif choice == "Contact Us":
@@ -237,13 +238,17 @@ elif choice == "Contact Us":
         """
         ## Contact Us
 
-        **Address:** Dayananda Sagar College of Engineering
+        Have questions or feedback? We're here to help!
 
-        **Phone:** 6969-6969-6969
+        - **Address:** Somewhere in Bangalore
+        - **Phone:** +91 98076-XXXXX
+        - **Email:** restraunt-reviews.com
 
-        **Email:** chutiye@rranalysis.com
+        Feel free to reach out to us for any inquiries. We look forward to hearing from you!
+
         """
     )
+
 
 # Analysis Page
 elif choice == "Analysis":
