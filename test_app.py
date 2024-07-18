@@ -7,6 +7,14 @@ import mysql.connector as ms
 from transformers import BertTokenizer, BertForSequenceClassification
 import torch
 
+# gemini api
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+google_api_key = os.getenv('GOOGLE_API_KEY')
+
+
 # Custom connection functions (replace with your own)
 from connection import is_connected, get_database_connection
 
