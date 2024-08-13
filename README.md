@@ -36,7 +36,7 @@ This project aims to build a comprehensive system for collecting and analyzing r
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/SahajG009/Sentiment_Analysis_Using_NLP.git
+    git clone https://github.com/PhenomSG/Sentiment_Analysis_Using_NLP.git
     cd restaurant-review-analysis
     ```
 
