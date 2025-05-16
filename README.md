@@ -1,4 +1,11 @@
 # Restaurant Review Analysis System
+### Sample Restaurant Images
+
+![Restaurant Image 1](imgs-website/1.png)
+![Restaurant Image 2](imgs-website/2.png)
+![Restaurant Image 3](imgs-website/3.png)
+![Restaurant Image 4](imgs-website/4.png)
+![Restaurant Image 5](imgs-website/5.png)
 
 ## Project Overview
 
